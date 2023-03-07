@@ -1,8 +1,13 @@
 import './App.css';
+import Product from './productPage';
+
 
 function App() {
   return (
-    <div>Edison Project</div>
+    <div>
+      <Product/>
+    </div>
+
   );
 }
 
