@@ -1,2 +1,0 @@
-MaiyonDevWindows test.
-MaiyonDevMacOSX test.
