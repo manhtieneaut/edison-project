@@ -1,13 +1,11 @@
-import './App.css';
-import Product from './productPage';
-
+import React from "react";
+import "./App.css";
 
 function App() {
   return (
     <div>
-      <Product/>
+      <App />
     </div>
-
   );
 }
 
