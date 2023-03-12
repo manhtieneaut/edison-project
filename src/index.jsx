@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Product from './pages/ProductUI/index'
+import Product from './pages/ProductUI';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
