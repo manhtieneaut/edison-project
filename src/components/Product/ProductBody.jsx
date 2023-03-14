@@ -1,9 +1,5 @@
-import ListProduct from "../../../components/Product/listProduct";
-
-const Body = () => {
-
-
-
+import ProductList from "./ProductList";
+const ProductBody = () => {
     return (
         <div className="body">
             <h1>Products</h1>
@@ -12,9 +8,9 @@ const Body = () => {
                 <a href="/#" className="arranger"><i class="fas fa-bars"></i></a>
             </div>
             <div className="list-item">
-                <ListProduct/>
+                <ProductList />
             </div>
         </div>
     )
 }
-export default Body;
+export default ProductBody;

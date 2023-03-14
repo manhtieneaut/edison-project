@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./style.css"
-const ListProduct = () => {
+const ProductList = () => {
     // const getList = async () => {
     //     let response = await fetch('https://dummyjson.com/products/');
     //     let data = await response.json();
@@ -10,9 +10,7 @@ const ListProduct = () => {
     //     console.log(item);
 
     // })
-
     const [post, setPost] = useState();
-
     useEffect(() => {
         const getData = async () => {
             try {
@@ -25,9 +23,7 @@ const ListProduct = () => {
 
         getData();
     }, []);
-
     return (
-
         <div className="ListProduct">
             {post?.map(item => {
                 console.log(item)
@@ -42,6 +38,5 @@ const ListProduct = () => {
             })}
         </div>
     )
-
 }
-export default ListProduct;
+export default ProductList;

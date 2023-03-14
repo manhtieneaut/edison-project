@@ -1,7 +1,4 @@
-import React from "react";
 import "./style.css"
-
-
 const About = () => {
     return (
         <div className="container">
@@ -9,7 +6,7 @@ const About = () => {
 
             <div className="header">
                 <div className="header-top">
-                    <a className="logo" href="/#"><img src={require('./images/logo.png')} alt="logo"></img></a>
+                    <a className="logo" href="/#"><img src={require('../../assets/images/logo.png')} alt="logo"></img></a>
                     <div className="nav-bar">
                         <a href="/#">Home</a>
                         <a href="/#">Pages</a>
@@ -29,14 +26,14 @@ const About = () => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing scelerisque a tincidunt urna nisl quam orci males</p>
                     </div>
                     <div className="header-image">
-                        <img src={require('./images/header-image.png')} alt="img"></img>
+                        <img src={require('../../assets/images/header-image.png')} alt="img"></img>
                     </div>
                 </div>
             </div>
 
             <div className="welcome">
                 <div className="left">
-                    <img src={require('./images/welcome.png')} alt="welcome"></img>
+                    <img src={require('../../assets/images/welcome.png')} alt="welcome"></img>
                 </div>
                 <div className="right">
                     <h1>Welcome to Farnic</h1>
@@ -52,7 +49,7 @@ const About = () => {
                     <p>Features that we have which Lorem ipsum dolor sit amet, consectetur convallis. Arcu, egestas nec scelerisque mi. Augue proin</p>
                     <div className="cart">
                         <div className="cart-left">
-                            <img src={require('./images/best.jpg')} alt="best"></img>
+                            <img src={require('../../assets/images/best.jpg')} alt="best"></img>
                         </div>
                         <div className="cart-right">
                             <h3 className="cart-title">Free Shipping</h3>
@@ -61,7 +58,7 @@ const About = () => {
                     </div>
                     <div className="cart">
                         <div className="cart-left">
-                            <img src={require('./images/best.jpg')} alt="best"></img>
+                            <img src={require('../../assets/images/best.jpg')} alt="best"></img>
                         </div>
                         <div className="cart-right">
                             <h3 className="cart-title">Easy Return Policy</h3>
@@ -70,7 +67,7 @@ const About = () => {
                     </div>
                     <div className="cart">
                         <div className="cart-left">
-                            <img src={require('./images/best.jpg')} alt="best"></img>
+                            <img src={require('../../assets/images/best.jpg')} alt="best"></img>
                         </div>
                         <div className="cart-right">
                             <h3 className="cart-title">Secure Payment</h3>
@@ -79,7 +76,7 @@ const About = () => {
                     </div>
                     <div className="cart">
                         <div className="cart-left">
-                            <img src={require('./images/best.jpg')} alt="best"></img>
+                            <img src={require('../../assets/images/best.jpg')} alt="best"></img>
                         </div>
                         <div className="cart-right">
                             <h3 className="cart-title">Best Quality</h3>
@@ -88,7 +85,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <img src={require('./images/best.jpg')} alt="best"></img>
+                    <img src={require('../../assets/images/best.jpg')} alt="best"></img>
                 </div>
             </div>
 
@@ -101,7 +98,7 @@ const About = () => {
                 </div>
                 <div className="item">
                     <div className="image-cus">
-                        <img src={require('./images/cus1.png')} alt="cus"></img>
+                        <img src={require('../../assets/images/cus1.png')} alt="cus"></img>
                         <h4 className="cart-title">Ramoses Galario</h4>
                         <p className="cart-content">Sydney, Australia</p>
                     </div>
@@ -112,11 +109,11 @@ const About = () => {
             </div>
 
             <div className="product">
-                <div className="item-product"><a href="/#"><img src={require('./images/product-image.png')} alt="pro"></img></a></div>
-                <div className="item-product"><a href="/#"><img src={require('./images/product-image1.png')} alt="pro"></img></a></div>
-                <div className="item-product"><a href="/#"><img src={require('./images/product-image2.png')} alt="pro"></img></a></div>
-                <div className="item-product"><a href="/#"><img src={require('./images/product-image3.png')} alt="pro"></img></a></div>
-                <div className="item-product"><a href="/#"><img src={require('./images/product-image4.png')} alt="pro"></img></a></div>
+                <div className="item-product"><a href="/#"><img src={require('../../assets/images/product-image.png')} alt="pro"></img></a></div>
+                <div className="item-product"><a href="/#"><img src={require('../../assets/images/product-image1.png')} alt="pro"></img></a></div>
+                <div className="item-product"><a href="/#"><img src={require('../../assets/images/product-image2.png')} alt="pro"></img></a></div>
+                <div className="item-product"><a href="/#"><img src={require('../../assets/images/product-image3.png')} alt="pro"></img></a></div>
+                <div className="item-product"><a href="/#"><img src={require('../../assets/images/product-image4.png')} alt="pro"></img></a></div>
             </div>
 
             <div className="subcribe">

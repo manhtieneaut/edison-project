@@ -3,7 +3,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header-top">
-                <a className="logo" href="/#"><img src={require('../assets/images/Logo.png')} alt="logo"></img></a>
+                <a className="logo" href="/#"><img src={require('../assets/images/logo.png')} alt="logo"></img></a>
                 <div className="nav-bar">
                     <a href="/#">Home</a>
                     <a href="/#">Pages</a>
