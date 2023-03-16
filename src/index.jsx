@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import SortFilter from './components/Sort-Filter';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ProductPage from './pages/ProductPage';
-import AboutUsPage from './pages/AboutUsPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AboutUsPage />
+    <SortFilter/>
   </React.StrictMode>
 );
 
