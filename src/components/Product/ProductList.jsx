@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./style.css"
+import "./style.css";
 const ProductList = () => {
     // const getList = async () => {
     //     let response = await fetch('https://dummyjson.com/products/');
