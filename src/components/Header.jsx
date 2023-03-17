@@ -1,34 +1,97 @@
+import '../pages/EdisonProjectUI/assets/css/base.css';
+import '../assets/css/header.css';
+
+// Import SVG.
+import headerSigninIcon from '../assets/images/headerImages/headerSigninIcon.svg';
+import headerCartIcon from '../assets/images/headerImages/headerCartIcon.svg';
 
 const Header = () => {
     return (
-        <div className="header">
-            <div className="header-top">
-                <a className="logo" href="/#"><img src={require('../assets/images/logo.png')} alt="logo"></img></a>
-                <div className="nav-bar">
-                    <a href="/#">Home</a>
-                    <a href="/#">Pages</a>
-                    <a href="/#">About</a>
-                    <a href="/#">Contact</a>
-                </div>
-                <div className="search">
-                    <input placeholder="Search" />
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div className="account"><a href="/#"><i class="far fa-user"></i></a></div>
-                <div className="cart"><a href="/#"><i class="fas fa-shopping-cart"></i></a></div>
+        <header className="header">
+            <div className="header-background">
+                <div className="header-background-primary"></div>
+                <div className="header-background-secondary"></div>
             </div>
-            <div className="header-end">
-                <div className="header-content">
-                    <h3>45% MEGA SALE OFFER</h3>
-                    <h1>Unique & Stylish Furniture</h1>
-                    <p>orem ipsum dolor sit amet, consectetur adipiscing elit quam scelerisque a tincidunt urna. Nisl, quam orci malesuada</p>
-                    <button>Shop now</button>
+            <div className="header-section">
+                <div className="header-top">
+                    <div className="header-top-block container">
+                        <a href="/#" className="headerLogo-link">
+                            <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="HeaderLogo" />
+                        </a>
+                        <nav className="navbar">
+                            <div className="navItem">
+                                <a href="/#">Home</a>
+                            </div>
+                            <div className="navItem">
+                                <a href="/#">Pages</a>
+                            </div>
+                            <div className="navItem">
+                                <a href="/#">About</a>
+                            </div>
+                            <div className="navItem">
+                                <a href="/#">Contact</a>
+                            </div>
+                        </nav>
+                        <div className="header-form">
+                            <form action="/#" method="post">
+                                <div className="header-form-section">
+                                    <input type="text" placeholder="Search" maxlength="256" className="header-search-input" />
+                                    <input type="submit" value="" className="header-search-submit" />
+                                </div>
+                            </form>
+                            <a href="/#">
+                                <img src={headerSigninIcon} alt="Signin-btn"
+                                    className="header-signin-btn" />
+                            </a>
+                            <a href="/#">
+                                <img src={headerCartIcon} alt="Cart-btn" className="header-cart" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div className="header-image">
-                    <img src={require('../assets/images/head-img.png')} alt="img"></img>
+                <div className="container-center">
+                    <div className="header-slider container">
+                        <div className="slider-left">
+                            <p className="slider-slogan">
+                                100% QUALITY - 100% SATISFACTION
+                            </p>
+                            <p className="slider-title">
+                                Classic & Elegent Furniture
+                            </p>
+                            <p className="slider-content">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eos illo expedita
+                                dolor
+                                delectus mollitia voluptatibus provident quaerat molestias hic voluptates perspiciatis
+                                ex?
+                                Autem ab, repellat placeat voluptatibus eveniet architecto!
+                            </p>
+                            <button className="slider-btn">shop now</button>
+                        </div>
+                        <div className="slider-right">
+                            <a href="/#">
+                                <img src={require('../assets/images/headerImages/Sofa.png')} alt="Sofa" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className="container-right">
+                <div className="header-bottom">
+                    <div className="header-bottom-img">
+                        <img src={require('../assets/images/headerImages/HeaderAdvertise.jpg')} alt="header-advertise" />
+                    </div>
+                    <div className="header-bottom-text">
+                        <p className="header-text-category">NEW COLLECTIONS</p>
+                        <p className="header-text-title">Leisure Chair Set</p>
+                        <p className="header-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                            eius neque, sequi asperiores
+                            amet a voluptates. Rem ut soluta atque, explicabo placeat ex vitae voluptatibus quod
+                            quisquam id blanditiis cupiditate.</p>
+                        <button className="header-text-btn">shop now</button>
+                    </div>
+                </div>
+            </div>
+        </header>
     )
 }
 export default Header;
