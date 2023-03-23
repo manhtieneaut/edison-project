@@ -5,6 +5,7 @@ import {
     from 'react-router-dom';
 import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
+import Cart from './components/CartAPI';
 
 const routerContext = createBrowserRouter([
     {
@@ -18,7 +19,12 @@ const routerContext = createBrowserRouter([
     {
         path: "/AboutUs",
         element: <AboutUsPage></AboutUsPage>
+    },
+    {
+        path:"/Cart",
+        element:<Cart></Cart>
     }
+    
 ])
 
 function router() {
