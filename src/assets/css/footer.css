@@ -1,0 +1,17 @@
+/* Footer section */
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-top--list {
+  width: 25%;
+}
+
+.footer-logo {
+  display: block;
+}
+
+.footer__social-list {
+  font-size: 18px
+}

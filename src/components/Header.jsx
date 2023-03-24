@@ -2,8 +2,8 @@ import '../pages/EdisonProjectUI/assets/css/base.css';
 import '../assets/css/header.css';
 
 // Import SVG.
-import headerSigninIcon from '../assets/images/headerImages/headerSigninIcon.svg';
-import headerCartIcon from '../assets/images/headerImages/headerCartIcon.svg';
+import HeaderSigninIcon from '../assets/images/headerImages/HeaderSigninIcon.svg';
+import HeaderCartIcon from '../assets/images/headerImages/HeaderCartIcon.svg';
 
 const Header = () => {
     return (
@@ -14,7 +14,7 @@ const Header = () => {
             </div>
             <div className="header-section">
                 <div className="header-top">
-                    <div className="header-top-block container">
+                    <div className="header-top-block content-container">
                         <a href="/#" className="headerLogo-link">
                             <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="HeaderLogo" />
                         </a>
@@ -40,17 +40,17 @@ const Header = () => {
                                 </div>
                             </form>
                             <a href="/#">
-                                <img src={headerSigninIcon} alt="Signin-btn"
+                                <img src={HeaderSigninIcon} alt="Signin-btn"
                                     className="header-signin-btn" />
                             </a>
                             <a href="/#">
-                                <img src={headerCartIcon} alt="Cart-btn" className="header-cart" />
+                                <img src={HeaderCartIcon} alt="Cart-btn" className="header-cart" />
                             </a>
                         </div>
                     </div>
                 </div>
                 <div className="container-center">
-                    <div className="header-slider container">
+                    <div className="header-slider content-container">
                         <div className="slider-left">
                             <p className="slider-slogan">
                                 100% QUALITY - 100% SATISFACTION

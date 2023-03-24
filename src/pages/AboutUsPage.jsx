@@ -2,7 +2,7 @@ import "../assets/css/base.css";
 import "../assets/css/style.css";
 
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer-Tien";
 import ProductBody from "../components/Product/ProductBody";
 import AboutUsBody from "../components/AboutUs/AboutUs";
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./style.css";
 const ProductList = () => {
@@ -41,7 +41,7 @@ const ProductList = () => {
                         <img src={item.images[1]} alt='item'></img>
                         <h4 className='item-title' >{item?.title}</h4>
                         <p className='item-price'>{item?.price}$</p>
-                        <a className='add-cart' href='/#' onClick={addToCart(item)}>Add to cart</a>
+                        {/* <a className='add-cart' href='/#' onClick={addToCart(item)}>Add to cart</a> */}
                     </div>
                 );
             })}
