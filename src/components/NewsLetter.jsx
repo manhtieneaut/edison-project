@@ -22,7 +22,6 @@ const NewsLetter = () => {
                         </div>
                     </div>
                 </div>
-                <img src={require('../assets/images/NewsLetterImages/newsletter-section.png')} alt="newsletter" className="newsletter-img" />
             </div>
         </div>
     )

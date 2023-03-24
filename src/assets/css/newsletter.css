@@ -80,12 +80,3 @@
     color: var(--text-color);
     font-size: 2rem;
 }
-
-.newsletter-img {
-    z-index: 1;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-50%);
-}
