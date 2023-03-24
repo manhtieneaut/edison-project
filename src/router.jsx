@@ -3,6 +3,8 @@ import {
     RouterProvider,
 }
     from 'react-router-dom';
+import Login from './components/Login/Login';
+import SignUp from './components/Login/SignUp';
 import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
 import Cart from './components/CartAPI';
@@ -13,6 +15,14 @@ const routerContext = createBrowserRouter([
         element: <div>Home</div>
     },
     {
+        path: '/Login',
+        element: <Login></Login>
+    },
+    {
+        path: '/SignUp',
+        element: <SignUp></SignUp>
+    },
+    {
         path: "/Product",
         element: <ProductPage></ProductPage>
     },
@@ -21,10 +31,10 @@ const routerContext = createBrowserRouter([
         element: <AboutUsPage></AboutUsPage>
     },
     {
-        path:"/Cart",
-        element:<Cart></Cart>
+        path: "/Cart",
+        element: <Cart></Cart>
     }
-    
+
 ])
 
 function router() {
