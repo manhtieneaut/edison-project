@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import "./style.css"
+import { useNavigate } from 'react-router-dom';
+import "./style.css";
 const ProductList = () => {
-    // const getList = async () => {
-    //     let response = await fetch('https://dummyjson.com/products/');
-    //     let data = await response.json();
-    //     return data.products;
-    // }
-    // getList().then(item => {
-    //     console.log(item);
-
-    // })
+    const navigate = useNavigate();
     const [post, setPost] = useState();
     useEffect(() => {
         const getData = async () => {
@@ -23,6 +16,22 @@ const ProductList = () => {
 
         getData();
     }, []);
+
+    const addToCart = async (item) => {
+        await fetch('https://dummyjson.com/carts/add', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                userId: 1,
+                products: [item]
+            })
+        })
+            .then(res => res.json())
+            .then(data => console.log('add new cart:', data));
+        navigate('/Cart');
+
+    }
+
     return (
         <div className="ListProduct">
             {post?.map(item => {
@@ -32,7 +41,7 @@ const ProductList = () => {
                         <img src={item.images[1]} alt='item'></img>
                         <h4 className='item-title' >{item?.title}</h4>
                         <p className='item-price'>{item?.price}$</p>
-                        <a className='add-cart' href='/#'>Add to cart</a>
+                        <a className='add-cart' href='/#' onClick={addToCart(item)}>Add to cart</a>
                     </div>
                 );
             })}
