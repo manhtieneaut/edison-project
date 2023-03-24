@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
-// import { useParams } from 'react-router';
-
 const Cart = () => {
-
   const [data, setData] = useState()
   const [userId, setUserId] = useState(1)
   // const userId = params.userId;
-
   useEffect(() => {
     getCartByUserId();
   }, [])
@@ -18,8 +14,6 @@ const Cart = () => {
       .catch(err => console.log(err))
 
   }
-
-
   return (
     <div className="Cart">
       <h1 className="cart-title">Cart</h1>

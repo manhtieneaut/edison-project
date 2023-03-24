@@ -1,26 +1,28 @@
 import '../pages/EdisonProjectUI/assets/css/base.css';
 import '../assets/css/newsletter.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const NewsLetter = () => {
     return (
-        <div class="newsletter">
-            <div class="newsletter-section">
-                <div class="newsletter-center">
-                    <div class="newsletter-content">
-                        <div class="newsletter-title">
+        <div className="newsletter">
+            <div className="newsletter-section">
+                <div className="newsletter-center">
+                    <div className="newsletter-content">
+                        <div className="newsletter-title">
                             <p>Subscribe our Newsletter</p>
                         </div>
-                        <div class="newsletter-submit">
-                            <form action="#" method="get" class="newsletter-submit-block">
-                                <input type="text" placeholder="Enter your email here" class="newsletter-submit-input" />
-                                <button class="newsletter-submit-button">
-                                    <i class="fa-solid fa-arrow-right newsletter-submit-icon"></i>
+                        <div className="newsletter-submit">
+                            <form action="#" method="get" className="newsletter-submit-block">
+                                <input type="text" placeholder="Enter your email here" className="newsletter-submit-input" />
+                                <button className="newsletter-submit-button">
+                                    <FontAwesomeIcon icon={solid("arrow-right")} className="newsletter-submit-icon" />
                                 </button>
                             </form>
                         </div>
                     </div>
                 </div>
-                <img src={require('../assets/images/NewsLetterImages/newsletter-section.png')} alt="newsletter-section" class="newsletter-img" />
+                <img src={require('../assets/images/NewsLetterImages/newsletter-section.png')} alt="newsletter" className="newsletter-img" />
             </div>
         </div>
     )

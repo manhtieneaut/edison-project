@@ -35,16 +35,22 @@
 }
 
 .newsletter-title {
-    width: 352px;
-    line-height: 40px;
+    width: 35rem;
+    line-height: 4rem;
 }
 
 .newsletter-submit-input {
-    width: 417px;
-    height: 60px;
+    width: 42rem;
+    height: 6rem;
     background-color: inherit;
     border: solid var(--white-color) 1px;
     font-size: 1.4rem;
+
+}
+
+.newsletter-submit-input:focus {
+    color: var(--white-color);
+    outline: none;
 }
 
 .newsletter-submit {
@@ -62,14 +68,17 @@
     padding: 0;
     border: none;
     outline: none;
-    width: 52px;
-    height: 60px;
+    width: 5.2rem;
+    height: 6rem;
+}
+
+.newsletter-submit-button:hover {
+    cursor: pointer;
 }
 
 .newsletter-submit-icon {
-    text-align: center;
-    line-height: 60px;
-    font-weight: bold;
+    color: var(--text-color);
+    font-size: 2rem;
 }
 
 .newsletter-img {
