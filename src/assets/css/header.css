@@ -182,8 +182,8 @@ a:visited {
     cursor: pointer;
 }
 
-.header-botton {
-    position: absolute;
+.header-bottom {
+    position: relative;
 }
 
 .header-bottom-img {
@@ -194,8 +194,7 @@ a:visited {
     width: 400px;
     height: 575px;
     text-align: center;
-    position: relative;
-    top: -40%;
+    position: absolute;
     left: 45%;
 }
 
