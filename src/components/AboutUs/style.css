@@ -35,7 +35,7 @@
 }
 
 .nav-bar a {
-  
+
   margin-right: 10px;
   margin-left: 30px;
   text-align: center;
@@ -105,216 +105,143 @@
   width: 100%;
 } */
 
-.welcome{
+.welcome {
   height: 500px;
 }
-.welcome .left{
+
+.welcome .left {
   width: 40%;
   height: 80%;
   float: left;
   margin-left: 10%;
   margin-top: 5%;
 }
-.welcome img{
+
+.welcome img {
   width: 100%;
 }
-.welcome .right{
+
+.welcome .right {
   width: 33%;
   height: 80%;
   float: left;
-  margin-top:5%;
+  margin-top: 5%;
   margin-left: 7%;
 }
 
-.best{
+.best {
   height: 350px;
 }
-.best .left{
+
+.best .left {
   width: 40%;
   float: left;
   margin-left: 5%;
   height: 100%;
   margin-right: 5%;
 }
-.best .right{
+
+.best .right {
   width: 50%;
   float: left;
   height: 100%;
 }
-.best img{
+
+.best img {
   width: 100%;
   height: 100%;
 }
-.best .cart{
+
+.best .cart {
   width: 43%;
   height: 25%;
   float: left;
   margin-right: 5%;
   margin-top: 5%;
 }
-.cart img{
+
+.cart img {
   width: 100%;
   height: 50%;
 }
-.cart .cart-left{
+
+.cart .cart-left {
   width: 25%;
   float: left;
   height: 100%;
 }
-.cart .cart-right{
+
+.cart .cart-right {
   width: 70%;
   height: 100%;
   float: left;
   margin-left: 5%;
 }
-.cart-title{
+
+.cart-title {
   margin-top: 0;
   font-size: 13;
   margin-bottom: 2px;
 }
-.cart-content{
+
+.cart-content {
   margin-top: 2px;
   font-size: 10px;
 }
-.customer{
+
+.customer {
   height: 400px;
   margin-top: 100px;
 }
-.customer .title{
+
+.customer .title {
   text-align: center;
   height: 30%;
 }
-.customer .item{
+
+.customer .item {
   height: 40%;
   width: 60%;
   margin-left: 20%;
   border: 1px solid;
 }
-.item .image-cus{
+
+.item .image-cus {
   width: 30%;
   float: left;
   background-color: antiquewhite;
   height: 100%;
   text-align: center;
 }
-.item .content-cus{
+
+.item .content-cus {
   width: 50%;
   margin-left: 10%;
   float: left;
   height: 100%;
 }
-.product{
+
+.product {
   height: 150px;
   width: 80%;
   margin-left: 10%;
-  
+
 }
-.item-product{
+
+.item-product {
   width: 20%;
   height: 50%;
   float: left;
   margin-top: 5%;
   text-align: center;
-}  
-.product img{
+}
+
+.product img {
   width: 60px;
   height: 60px;
   opacity: 0.6;
 }
-.product img:hover{
+
+.product img:hover {
   opacity: 1;
 }
-
-.subcribe{
-  height: 150px;
-  background-color: rgb(104, 195, 195);
-}
-
-
-.subcribe .title{
-  width: 20%;
-  height: 80%;
-  float: left;
-  margin-left: 10%;
-  margin-top: 20px;
-}
-.subcribe .require{
-  width: 70%;
-  height: 100%;
-  float: left;
-}
-.subcribe .email{
-  border: 1px solid;
-  width: 300px;
-  border: 2px white;
-  margin-top: 8%;
-  margin-left: 5%;
-}
-.subcribe input{
-  height: 30px;
-  width: 265px;
-  border: none;
-  outline: none;
-  color:initial;
-}
-.subcribe button{
-  height: 32px;
-  width: 30px;
-  background-color: white;
-  border: 1px white;
-  border-left: 2px solid;
-}
-  
-
-.footer {
-  width: 100%;
-  background-color: rgb(219, 213, 213);
-  height: 400px;
-  border: 1px solid;
-}
-
-.footer-start {
-  width: 80%;
-  height: 90%;
-  margin-left: 10%;
-}
-
-.footer .col {
-  height: 50%;
-  width: 20%;
-  float: left;
-  border: 1ps solid;
-  margin-right: 40px;
-  margin-top: 5%;
-}
-
-.footer-end {
-  border-top: 1px solid;
-  width: 100%;
-  text-align: center;
-  min-height: 30px;
-}
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
