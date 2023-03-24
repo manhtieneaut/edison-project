@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <!-- PLayfair Display Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
     <!-- Css reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -37,7 +37,7 @@
             </div>
             <div class="header-section">
                 <div class="header-top">
-                    <div class="header-top-block content-container">
+                    <div class="header-top-block contentPadding">
                         <a href="#" class="headerLogo-link">
                             <img src="./assets/images/HeaderLogo.png" alt="HeaderLogo">
                         </a>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="container-center">
-                    <div class="header-slider content-container">
+                    <div class="header-slider contentPadding">
                         <div class="slider-left">
                             <p class="slider-slogan">
                                 100% QUALITY - 100% SATISFACTION
@@ -139,60 +139,67 @@
                         </div>
                     </div>
                 </div>
-                <img src="./assets/images/newsletter-section.png" alt="newsletter" class="newsletter-img">
             </div>
         </div>
         <footer class="footer">
-            <div class="footer-center content-container">
-                <div class="footer-top">
-                    <div class="footer-top--list">
-                        <a href="#" class="headerLogo-link">
-                            <img src="./assets/images/HeaderLogo.png" alt="HeaderLogo" class="footer-logo">
-                        </a>
-                        <p class="footer-top--text">Features that we have which lorem ipsum dolor sit amet,
-                            consectetur.</p>
-                        <h3 class="footer-top--title">Folow us</h3>
-                        <div class="footer__social-list">
+            <div class="contentPadding">
+                <div class="footerTop">
+                    <div class="navList">
+                        <div class="navList-wrap">
                             <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
+                                <img src="./assets/images/HeaderLogo.png" alt="HeaderLogo" class="footerLogo">
                             </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-behance"></i>
-                            </a>
+                            <p class="navList-text">Features that we have which lorem ipsum dolor sit amet,
+                                consectetur.</p>
+                            <h3 class="navList-title navList-followTitle">Folow us</h3>
+                            <div class="socialLink">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-behance"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-top--list">
-                        <h3 class="footer-top--title">Company</h3>
-                        <div class="footer__link-list">
-                            <a href="#">Home</a>
-                            <a href="#">About us</a>
-                            <a href="#">Our blog post</a>
-                            <a href="#">Contact</a>
-                            <a href="#">Login</a>
-                            <a href="#">Register</a>
-                            <a href="#">Shop</a>
+                    <div class="navList">
+                        <div class="navList-wrap">
+                            <h3 class="navList-title">Company</h3>
+                            <div class="navList-link">
+                                <a href="#">Home</a>
+                                <a href="#">About us</a>
+                                <a href="#">Our blog post</a>
+                                <a href="#">Contact</a>
+                                <a href="#">Login</a>
+                                <a href="#">Register</a>
+                                <a href="#">Shop</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-top--list">
-                        <h3 class="footer-top--title">Information</h3>
-                        <div class="footer__link-list">
-                            <a href="#">Terms & Conditions</a>
-                            <a href="#">Style Guide</a>
-                            <a href="#">Changelog</a>
-                            <a href="#">Licenses</a>
+                    <div class="navList">
+                        <div class="navList-wrap">
+                            <h3 class="navList-title">Information</h3>
+                            <div class="navList-link">
+                                <a href="#">Terms & Conditions</a>
+                                <a href="#">Style Guide</a>
+                                <a href="#">Changelog</a>
+                                <a href="#">Licenses</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-top--list">
-                        <h3 class="footer-top--title">Contact Us</h3>
-                        <p class="footer-top--text">256, Central City, Borlex House Main town, New York, USA</p>
-                        <h3 class="footer-top--title">+880(12) 125 48765</h3>
-                        <p class="footer-top--text">www.examples.com</p>
+                    <div class="navList">
+                        <div class="navList-wrap">
+                            <h3 class="navList-title">Contact Us</h3>
+                            <p class="navList-text">256, Central City, Borlex House Main town, New York, USA</p>
+                            <h3 class="navList-title">+880(12) 125 48765</h3>
+                            <p class="navList-text">www.examples.com</p>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-bottom"></div>

@@ -14,7 +14,7 @@ const Header = () => {
             </div>
             <div className="header-section">
                 <div className="header-top">
-                    <div className="header-top-block content-container">
+                    <div className="header-top-block contentPadding">
                         <a href="/#" className="headerLogo-link">
                             <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="HeaderLogo" />
                         </a>
@@ -50,7 +50,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="container-center">
-                    <div className="header-slider content-container">
+                    <div className="header-slider contentPadding">
                         <div className="slider-left">
                             <p className="slider-slogan">
                                 100% QUALITY - 100% SATISFACTION

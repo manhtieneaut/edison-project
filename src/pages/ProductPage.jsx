@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import NewsLetter from "../components/NewsLetter";
-import Footer from "../components/Footer-Tien";
+import Footer from "../components/Footer";
 
 import ProductBody from "../components/Product/ProductBody";
 
