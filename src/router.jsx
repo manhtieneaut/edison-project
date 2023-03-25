@@ -31,8 +31,9 @@ const routerContext = createBrowserRouter([
         element: <AboutUsPage></AboutUsPage>
     },
     {
-        path: "/Cart",
+        path: "/Cart/:userId",
         element: <Cart></Cart>
+      
     }
 
 ])
