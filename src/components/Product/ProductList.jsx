@@ -4,6 +4,7 @@ import "./style.css";
 const ProductList = () => {
     const navigate = useNavigate();
     const [post, setPost] = useState();
+  
     useEffect(() => {
         const getData = async () => {
             try {
