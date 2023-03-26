@@ -8,6 +8,7 @@ import SignUp from './components/Login/SignUp';
 import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
 import Cart from './components/CartAPI';
+import Pagination from './components/Pagination/Pagination';
 
 const routerContext = createBrowserRouter([
     {
@@ -34,8 +35,12 @@ const routerContext = createBrowserRouter([
         path: "/Cart/:userId",
         element: <Cart></Cart>
       
+    },
+    {
+        path:"/Pagination",
+        element:<Pagination></Pagination>
     }
-
+   
 ])
 
 function router() {
