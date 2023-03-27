@@ -4,7 +4,7 @@ import "./style.css";
 const ProductList = () => {
     const navigate = useNavigate();
     const [post, setPost] = useState();
-  
+
     useEffect(() => {
         const getData = async () => {
             try {
@@ -18,8 +18,27 @@ const ProductList = () => {
         getData();
     }, []);
 
+    // add to cart by dummy json
+
+    // const addToCart = async (item) => {
+    //     await fetch('https://dummyjson.com/carts/add', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify({
+    //             userId: 1,
+    //             products: [item]
+    //         })
+    //     })
+    //         .then(res => res.json())    
+    //         .then(data => console.log('add new cart:', data));
+    //     navigate('/Cart');
+
+    // }
+
+    // add to cart by local json
     const addToCart = async (item) => {
-        await fetch('https://dummyjson.com/carts/add', {
+        // thêm sản phẩm vào giỏ hàng trên server
+        await fetch('  http://localhost:3000', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -29,9 +48,26 @@ const ProductList = () => {
         })
             .then(res => res.json())
             .then(data => console.log('add new cart:', data));
-        navigate('/Cart');
 
+        // lấy thông tin giỏ hàng từ Local Storage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // thêm sản phẩm vào giỏ hàng
+        cart.push(item);
+
+        // lưu lại thông tin giỏ hàng vào Local Storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // chuyển hướng sang trang giỏ hàng
+        navigate('/Cart');
     }
+
+    
+    // lấy giỏ hàng (chuyển code này sang Cart)
+    // const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // console.log('cart:', cart);
+
+
 
     return (
         <div className="ListProduct">
