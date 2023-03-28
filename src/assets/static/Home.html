@@ -18,14 +18,13 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.3.0-web/css/all.min.css" />
     <!-- Own Styles -->
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="../../assets/css/header.css">
-    <link rel="stylesheet" href="../../assets/css/newsletter.css">
-    <link rel="stylesheet" href="../../assets/css/footer.css">
-
-    <title>Edison Project UI</title>
+    <link rel="stylesheet" href="../sass/base.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/newsletter.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <title>Home</title>
 </head>
 
 <body>
@@ -37,9 +36,9 @@
             </div>
             <div class="header-section">
                 <div class="header-top">
-                    <div class="header-top-block contentPadding">
-                        <a href="#" class="headerLogo-link">
-                            <img src="./assets/images/HeaderLogo.png" alt="HeaderLogo">
+                    <div class="header-top-wrap contentPadding">
+                        <a href="#" class="header-logo">
+                            <img src="../images/headerImages/HeaderLogo.png" alt="header-logo">
                         </a>
                         <nav class="navbar">
                             <div class="navItem">
@@ -55,19 +54,20 @@
                                 <a href="#">Contact</a>
                             </div>
                         </nav>
-                        <div class="header-form">
-                            <form action="#" method="post">
-                                <div class="header-form-section">
+                        <div class="header-top-form">
+                            <form action="#" method="post" class="header-top-form-block">
+                                <div class="header-top-form-wrap">
                                     <input type="text" placeholder="Search" maxlength="256" class="header-search-input">
                                     <input type="submit" value="" class="header-search-submit">
                                 </div>
                             </form>
                             <a href="#">
-                                <img src="./assets/images/headerSigninIcon.svg" alt="Signin-btn"
+                                <img src="../images/headerImages/HeaderSigninIcon.svg" alt="Signin-btn"
                                     class="header-signin-btn">
                             </a>
                             <a href="#">
-                                <img src="./assets/images/headerCartIcon.svg" alt="Cart-btn" class="header-cart">
+                                <img src="../images/headerImages/HeaderCartIcon.svg" alt="Cart-btn"
+                                    class="header-cart-btn">
                             </a>
                         </div>
                     </div>
@@ -75,24 +75,24 @@
                 <div class="container-center">
                     <div class="header-slider contentPadding">
                         <div class="slider-left">
-                            <p class="slider-slogan">
+                            <p class="slider-left-slogan">
                                 100% QUALITY - 100% SATISFACTION
                             </p>
-                            <p class="slider-title">
+                            <p class="slider-left-title">
                                 Classic & Elegent Furniture
                             </p>
-                            <p class="slider-content">
+                            <p class="slider-left-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eos illo expedita
                                 dolor
                                 delectus mollitia voluptatibus provident quaerat molestias hic voluptates perspiciatis
                                 ex?
                                 Autem ab, repellat placeat voluptatibus eveniet architecto!
                             </p>
-                            <button class="slider-btn">shop now</button>
+                            <button class="slider-left-btn">shop now</button>
                         </div>
                         <div class="slider-right">
                             <a href="#">
-                                <img src="./assets/images/Slider/Sofa.png" alt="Sofa.png">
+                                <img src="../images/headerImages/Sofa.png" alt="Sofa.png">
                             </a>
                         </div>
                     </div>
@@ -101,16 +101,16 @@
             <div class="container-right">
                 <div class="header-bottom">
                     <div class="header-bottom-img">
-                        <img src="./assets/images/Header/HeaderAdvertise.jpg" alt="header-advertise">
+                        <img src="../images/headerImages/HeaderAdvertise.jpg" alt="header-advertise">
                     </div>
-                    <div class="header-bottom-text">
-                        <p class="header-text-category">NEW COLLECTIONS</p>
-                        <p class="header-text-title">Leisure Chair Set</p>
-                        <p class="header-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                    <div class="header-bWrap">
+                        <p class="header-bWrap-category">NEW COLLECTIONS</p>
+                        <p class="header-bWrap-title">Leisure Chair Set</p>
+                        <p class="header-bWrap-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
                             eius neque, sequi asperiores
                             amet a voluptates. Rem ut soluta atque, explicabo placeat ex vitae voluptatibus quod
                             quisquam id blanditiis cupiditate.</p>
-                        <button class="header-text-btn">shop now</button>
+                        <button class="header-bWrap-btn">shop now</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
                     <div class="navList">
                         <div class="navList-wrap">
                             <a href="#">
-                                <img src="./assets/images/HeaderLogo.png" alt="HeaderLogo" class="footerLogo">
+                                <img src="../images/headerImages/HeaderLogo.png" alt="footer-logo" class="footerLogo">
                             </a>
                             <p class="navList-text">Features that we have which lorem ipsum dolor sit amet,
                                 consectetur.</p>

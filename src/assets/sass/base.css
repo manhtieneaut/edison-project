@@ -16,22 +16,20 @@ html {
   font-family: "Jost", sans-serif;
   box-sizing: border-box;
 }
-
-.grid {
+html .grid {
   width: 120rem;
   max-width: 100%;
   margin: 0 auto;
 }
-
-.grid__full-width {
+html .grid__full-width {
   width: 100%;
 }
-
-.grid__row {
+html .grid__row {
   display: flex;
   flex-wrap: wrap;
 }
-
-.contentPadding {
+html .contentPadding {
   width: 117rem !important;
 }
+
+/*# sourceMappingURL=base.css.map */

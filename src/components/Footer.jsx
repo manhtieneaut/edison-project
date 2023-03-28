@@ -1,4 +1,4 @@
-import '../pages/EdisonProjectUI/assets/css/base.css';
+import '../assets/sass/base.scss';
 import '../assets/css/footer.css';
 
 const Footer = () => {

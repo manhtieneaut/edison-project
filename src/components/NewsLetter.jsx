@@ -1,4 +1,4 @@
-import '../pages/EdisonProjectUI/assets/css/base.css';
+import '../assets/sass/base.scss';
 import '../assets/css/newsletter.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
