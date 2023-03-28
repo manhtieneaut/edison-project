@@ -33,5 +33,5 @@ html {
 }
 
 .contentPadding {
-  width: 117rem;
+  width: 117rem !important;
 }
