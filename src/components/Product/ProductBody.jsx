@@ -1,5 +1,8 @@
 // import Pagination from "./Pagination";
 import ProductList from "./ProductList";
+
+import './style.css';
+
 const ProductBody = () => {
     return (
         <div className="body">
