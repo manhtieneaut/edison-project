@@ -8,9 +8,8 @@ const ProductList = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                let response = await fetch('https://dummyjson.com/products?limit=2&skip=0&select=title,price,images');
+                let response = await fetch('https://dummyjson.com/products?limit=2&skip=0');
                 let data = await response.json();
-                console.log(data)
                 setPost(data.products);
             } catch (error) { }
         };
@@ -19,7 +18,6 @@ const ProductList = () => {
     }, []);
 
     // add to cart by dummy json
-
     // const addToCart = async (item) => {
     //     await fetch('https://dummyjson.com/carts/add', {
     //         method: 'POST',
@@ -31,54 +29,44 @@ const ProductList = () => {
     //     })
     //         .then(res => res.json())    
     //         .then(data => console.log('add new cart:', data));
-    //     navigate('/Cart');
 
     // }
 
     // add to cart by local json
     const addToCart = async (item) => {
-        // thêm sản phẩm vào giỏ hàng trên server
-        await fetch('  http://localhost:3000', {
+        try {
+          // Thêm sản phẩm vào giỏ hàng trên server
+          await fetch('http://localhost:3000/cart', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                userId: 1,
-                products: [item]
+              userId: 1,
+              products: [item]
             })
-        })
-            .then(res => res.json())
-            .then(data => console.log('add new cart:', data));
-
-        // lấy thông tin giỏ hàng từ Local Storage
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // thêm sản phẩm vào giỏ hàng
-        cart.push(item);
-
-        // lưu lại thông tin giỏ hàng vào Local Storage
-        localStorage.setItem('cart', JSON.stringify(cart));
-
-        // chuyển hướng sang trang giỏ hàng
+          });
+          
+          // Lưu sản phẩm vào local storage
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.push(item);
+          localStorage.setItem('cart', JSON.stringify(cart));
+        } catch (error) {
+          console.error('Error adding to cart:', error);
+        }
         navigate('/Cart');
-    }
+      };
 
-    
-    // lấy giỏ hàng (chuyển code này sang Cart)
-    // const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    // console.log('cart:', cart);
-
+   
 
 
     return (
         <div className="ListProduct">
             {post?.map(item => {
-                console.log(item)
                 return (
                     <div className='item' key={item?.id}>
                         <img src={item.images[1]} alt='item'></img>
                         <h4 className='item-title' >{item?.title}</h4>
                         <p className='item-price'>{item?.price}$</p>
-                        {/* <a className='add-cart' href='/#' onClick={addToCart(item)}>Add to cart</a> */}
+                        <a className='add-cart' onClick={(e) => addToCart(item)}>Add to cart</a>
                     </div>
                 );
             })}

@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 const Cart = () => {
-  const [data, setData] = useState()
+  const [data, setData] = useState([])
   const { userId } = useParams();
-  console.log(userId)
 
   useEffect(() => {
     getCartByUserId();
-  }, [])
+  }, [userId])
 
   const getCartByUserId = async () => {
     return await fetch(`https://dummyjson.com/carts/user/${userId}`)
       .then(res => res.json())
       .then(data => setData(data.carts[0]))
       .catch(err => console.log(err))
-
   }
+
+
+
+
+
   if (userId) {
     return (
       <div>
@@ -31,13 +34,13 @@ const Cart = () => {
           </thead>
           <tbody>
             {
-              data?.products.map((product, index) => {
+              data?.products?.map((product, index) => {
                 return (
                   <tr key={index}>
                     <td>{product.title}</td>
-                    <td>{product.price} VNĐ</td>
+                    <td>{product.price} USD</td>
                     <td>{product.quantity}</td>
-                    <td>{product.total}VNĐ</td>
+                    <td>{product.total}USD</td>
                   </tr>
                 )
               })
@@ -48,7 +51,7 @@ const Cart = () => {
                 <strong>Tổng tiền:</strong>
               </td>
               <td>
-                <strong>1,200,000 VNĐ</strong>
+                <strong>{ data?.total} USD</strong>
               </td>
             </tr>
           </tbody>
@@ -57,8 +60,8 @@ const Cart = () => {
         <button className="button">Thanh toán</button>
       </div>
     )
-  }else{
-    return(
+  } else {
+    return (
       <div>
         <h1>Bạn chưa đăng nhập, hãy đăng nhập để sử dụng giỏ hàng</h1>
       </div>
