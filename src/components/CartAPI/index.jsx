@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 const Cart = () => {
-  const [data, setData] = useState([])
-  const { userId } = useParams();
+  // const [data, setData] = useState([])
+  // const { userId } = useParams();
+  //Lấy dữ liệu bằng fetch id bằng 
+  // useEffect(() => {
+  //   getCartByUserId();
+  // }, [userId])
+  // const getCartByUserId = async () => {
+  //   return await fetch(`https://dummyjson.com/carts/user/${userId}`)
+  //     .then(res => res.json())
+  //     .then(data => setData(data.carts[0]))
+  //     .catch(err => console.log(err))
+  // }
 
-  useEffect(() => {
-    getCartByUserId();
-  }, [userId])
-
-  const getCartByUserId = async () => {
-    return await fetch(`https://dummyjson.com/carts/user/${userId}`)
-      .then(res => res.json())
-      .then(data => setData(data.carts[0]))
-      .catch(err => console.log(err))
-  }
+  //Lấy dữ liệu bằng local storate
+  const cartJson = localStorage.getItem('cart');
+  const cart = JSON.parse(cartJson);
 
 
 
-
-
-  if (userId) {
+  // Kiểm tra xem giỏ hàng có chứa sản phẩm hay không
+  if (cart && cart.length > 0) {
+    // console.log(cart)
     return (
       <div>
         <h1>Giỏ hàng của bạn</h1>
@@ -34,7 +37,7 @@ const Cart = () => {
           </thead>
           <tbody>
             {
-              data?.products?.map((product, index) => {
+              cart?.map((product, index) => {
                 return (
                   <tr key={index}>
                     <td>{product.title}</td>
@@ -51,7 +54,7 @@ const Cart = () => {
                 <strong>Tổng tiền:</strong>
               </td>
               <td>
-                <strong>{ data?.total} USD</strong>
+                <strong>100000 USD</strong>
               </td>
             </tr>
           </tbody>
@@ -59,14 +62,13 @@ const Cart = () => {
         <br />
         <button className="button">Thanh toán</button>
       </div>
+
     )
   } else {
     return (
-      <div>
-        <h1>Bạn chưa đăng nhập, hãy đăng nhập để sử dụng giỏ hàng</h1>
-      </div>
+      <h1>ko có sản phẩm trong giỏ hàn hàng</h1>
+
     )
   }
-
 }
 export default Cart;

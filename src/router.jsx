@@ -37,7 +37,7 @@ const routerContext = createBrowserRouter([
         element: <AboutUsPage></AboutUsPage>
     },
     {
-        path: "/Cart/:userId",
+        path: "/Cart",
         element: <Cart></Cart>
 
     },
@@ -45,7 +45,6 @@ const routerContext = createBrowserRouter([
         path: "/Pagination",
         element: <Pagination></Pagination>
     }
-
 ])
 
 function router() {
