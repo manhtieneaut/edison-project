@@ -1,5 +1,13 @@
+.product-main{
+    width: 100%;
+    height:auto;
+}
 .ListProduct {
     width: 100%;
+    height: auto;
+    background-color: rgb(242, 146, 20);
+    border: 1px solid;
+    height: 100px;
 }
 
 .ListProduct img {
@@ -43,4 +51,8 @@
     background-color: white;
     color: inherit;
     opacity: 0;
+}
+.pagination{
+    width: 100%;
+    border: 1px solid;
 }
