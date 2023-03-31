@@ -2,15 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ProductPage from './pages/ProductPage';
-import AboutUsPage from './pages/AboutUsPage';
-import LoginPage from './pages/LoginPage';
-import SignUpPage from './pages/SignUpPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <App />
+    <App />
   </React.StrictMode>
 );
 

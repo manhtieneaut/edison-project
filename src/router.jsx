@@ -3,16 +3,22 @@ import {
     RouterProvider,
 }
     from 'react-router-dom';
-import Login from './components/Login/Login';
-import SignUp from './components/Login/SignUp';
+import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
 import Cart from './components/CartAPI';
+import Pagination from './components/Pagination/Pagination';
+import Login from './components/Login/Login';
+import SignUp from './components/Login/SignUp';
 
 const routerContext = createBrowserRouter([
     {
         path: '/',
-        element: <div>Home</div>
+        element: <HomePage></HomePage>
+    },
+    {
+        path: '/Home',
+        element: <HomePage></HomePage>
     },
     {
         path: '/Login',
@@ -33,10 +39,12 @@ const routerContext = createBrowserRouter([
     {
         path: "/Cart",
         element: <Cart></Cart>
-      
+
     },
-   
-   
+    {
+        path: "/Pagination",
+        element: <Pagination></Pagination>
+    }
 ])
 
 function router() {

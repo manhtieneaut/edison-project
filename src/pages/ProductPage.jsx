@@ -4,8 +4,6 @@ import Footer from "../components/Footer";
 
 import ProductBody from "../components/Product/ProductBody";
 
-
-
 const ProductPage = () => {
     return (
         <div className="App">
