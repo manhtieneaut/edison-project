@@ -4,77 +4,81 @@
 .product-section {
     @include contentAlignFlex('center');
 
-    .product-wrap {
-        .product-title-wrap {
-            margin-top: 10rem;
+    .product-block {
+        @include containerPadding();
 
-            .product-title {
-                font-family: 'Playfair Display', sans-serif;
-                color: $g_blackColor;
-                font-size: 4.6rem;
-                line-height: 1.25;
-                font-weight: 700;
-                margin: 0;
+        .product-wrap {
+            .product-title-wrap {
+                margin-top: 10rem;
+
+                .product-title {
+                    font-family: 'Playfair Display', sans-serif;
+                    color: $g_blackColor;
+                    font-size: 4.6rem;
+                    line-height: 1.25;
+                    font-weight: 700;
+                    margin: 0;
+                }
+
+                .product-title-desc {
+                    font-family: 'Jost', sans-serif;
+                    color: $g_textColor;
+                    font-size: 1.8rem;
+                    line-height: 1.66;
+                    margin: 0;
+                }
             }
 
-            .product-title-desc {
-                font-family: 'Jost', sans-serif;
-                color: $g_textColor;
-                font-size: 1.8rem;
-                line-height: 1.66;
-                margin: 0;
-            }
-        }
+            .product-items {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
 
-        .product-items {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+                .product-item {
+                    a {
+                        text-decoration: none;
 
-            .product-item {
-                a {
-                    text-decoration: none;
+                        .product-item-image {
+                            border-radius: 1rem;
+                            box-shadow: 5px 5px 1.5rem $g_textColor;
 
-                    .product-item-image {
-                        border-radius: 1rem;
-                        box-shadow: 5px 5px 1.5rem $g_textColor;
+                            img {
+                                width: 37rem;
+                                height: 42.4rem;
+                                object-fit: contain;
+                            }
 
-                        img {
-                            width: 37rem;
-                            height: 42.4rem;
-                            object-fit: contain;
                         }
 
-                    }
+                        .product-item-title {
+                            transition: color 300ms ease;
+                            font-family: 'Playfair Display', sans-serif;
+                            color: $g_blackColor;
+                            font-size: 2.4rem;
+                            font-weight: 600;
+                            margin: 0;
+                            margin-top: 2rem;
+                        }
 
-                    .product-item-title {
-                        transition: color 300ms ease;
-                        font-family: 'Playfair Display', sans-serif;
-                        color: $g_blackColor;
-                        font-size: 2.4rem;
-                        font-weight: 600;
-                        margin: 0;
-                        margin-top: 2rem;
-                    }
+                        .product-item-title:hover {
+                            color: $dGreenColor;
+                            margin: 0;
+                            margin-top: 2rem;
+                        }
 
-                    .product-item-title:hover {
-                        color: $dGreenColor;
-                        margin: 0;
-                        margin-top: 2rem;
-                    }
+                        .product-item-cost {
+                            color: $g_blackColor;
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            margin: 0;
+                            margin-bottom: 2rem;
 
-                    .product-item-cost {
-                        color: $g_blackColor;
-                        font-size: 1.8rem;
-                        font-weight: 600;
-                        margin: 0;
-                        margin-bottom: 2rem;
-
-                        .product-item-discount {
-                            color: $g_textColor;
-                            font-size: 1.4rem;
-                            font-weight: 500;
-                            text-decoration: line-through;
+                            .product-item-discount {
+                                color: $g_textColor;
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                                text-decoration: line-through;
+                            }
                         }
                     }
                 }

@@ -1,25 +1,23 @@
 import '../assets/sass/base.scss';
-import '../assets/css/newsletter.css';
+import '../assets/sass/newsletter.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const NewsLetter = () => {
     return (
-        <div className="newsletter">
-            <div className="newsletter-section">
-                <div className="newsletter-center">
-                    <div className="newsletter-content">
-                        <div className="newsletter-title">
-                            <p>Subscribe our Newsletter</p>
-                        </div>
-                        <div className="newsletter-submit">
-                            <form action="#" method="get" className="newsletter-submit-block">
-                                <input type="text" placeholder="Enter your email here" className="newsletter-submit-input" />
-                                <button className="newsletter-submit-button">
-                                    <FontAwesomeIcon icon={solid("arrow-right")} className="newsletter-submit-icon" />
-                                </button>
-                            </form>
-                        </div>
+        <div className="newsletter-section">
+            <div className="newsletter-block">
+                <div className="newsletter-wrap">
+                    <div className="newsletter-title">
+                        <p>Subscribe our Newsletter</p>
+                    </div>
+                    <div className="newsletter-form-wrap">
+                        <form action="#" method="get" className="newsletter-form">
+                            <input type="text" placeholder="Enter your email here" className="newsletter-input" />
+                            <button className="newsletter-button">
+                                <FontAwesomeIcon icon={solid("arrow-right")} className="newsletter-icon" />
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
