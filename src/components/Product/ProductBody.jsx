@@ -1,20 +1,9 @@
 // import Pagination from "./Pagination";
 import ProductList from "./ProductList";
 
-import './style.css';
-
 const ProductBody = () => {
     return (
-        <div className="body">
-            <h1>Products</h1>
-            <div className="bar-item">
-                <a href="/#" className="arranger"><i class="fas fa-th"></i></a>
-                <a href="/#" className="arranger"><i class="fas fa-bars"></i></a>
-            </div>
-            <div className="list-item">
-                <ProductList />
-            </div>
-        </div>
+        <ProductList></ProductList>
     )
 }
 export default ProductBody;

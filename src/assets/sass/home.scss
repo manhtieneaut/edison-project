@@ -1,0 +1,83 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.product-section {
+    .product-title-wrap {
+        margin-top: 10rem;
+
+        .product-title {
+            font-family: 'Playfair Display', sans-serif;
+            color: $g_blackColor;
+            font-size: 4.6rem;
+            line-height: 1.25;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .product-title-desc {
+            font-family: 'Jost', sans-serif;
+            color: $g_textColor;
+            font-size: 1.8rem;
+            line-height: 1.66;
+            margin: 0;
+        }
+    }
+
+    .product-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .product-item {
+            a {
+                text-decoration: none;
+
+                .product-item-title {
+                    transition: color 300ms ease;
+                    font-family: 'Playfair Display', sans-serif;
+                    color: $g_blackColor;
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    margin: 0;
+                    margin-top: 2rem;
+                }
+
+                .product-item-title:hover {
+                    color: $dGreenColor;
+                    margin: 0;
+                    margin-top: 2rem;
+                }
+
+                .product-item-cost {
+                    color: $g_blackColor;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin: 0;
+                    margin-bottom: 2rem;
+
+                    .product-item-discount {
+                        color: $g_textColor;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-section {
+    margin: 5rem 0;
+
+    .slider-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .slider-item {
+            opacity: 0.5;
+            max-width: 15rem;
+        }
+    }
+}

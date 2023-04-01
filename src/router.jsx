@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
 import Cart from './components/CartAPI';
-import Pagination from './components/Pagination/Pagination';
+// import Pagination from './components/Pagination/Pagination';
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
 
@@ -41,10 +41,10 @@ const routerContext = createBrowserRouter([
         element: <Cart></Cart>
 
     },
-    {
-        path: "/Pagination",
-        element: <Pagination></Pagination>
-    }
+    // {
+    //     path: "/Pagination",
+    //     element: <Pagination></Pagination>
+    // }
 ])
 
 function router() {

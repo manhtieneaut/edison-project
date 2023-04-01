@@ -1,22 +1,9 @@
+@import './variables';
+@import './mixins';
+
 // Variables.
 $bgPriColor: #eff1f5;
 $bgSecColor: #fff;
-
-$tWhiteColor: #fff;
-$tColor: #333;
-
-// Mixins.
-@mixin contentAlignFlex($dir: "left") {
-    display: flex;
-
-    @if $dir =="right" {
-        justify-content: right;
-    }
-
-    @else if $dir =="center" {
-        justify-content: center;
-    }
-}
 
 .header {
     width: 100%;
@@ -220,27 +207,27 @@ $tColor: #333;
                 left: 45%;
 
                 &-category {
-                    color: $tWhiteColor;
+                    color: $g_whiteColor;
                     font-weight: lighter;
                     font-size: 1.6rem;
                 }
 
                 &-title {
-                    color: $tWhiteColor;
+                    color: $g_whiteColor;
                     font-family: "Playfair Display", serif;
                     font-weight: bolder;
                     font-size: 4.6rem;
                 }
 
                 &-text {
-                    color: $tWhiteColor;
+                    color: $g_whiteColor;
                     font-size: 1.6rem;
                     font-weight: lighter;
                 }
 
                 &-btn {
-                    background-color: $tWhiteColor;
-                    color: $tColor;
+                    background-color: $g_whiteColor;
+                    color: $g_textColor;
                     border: none;
                     font-size: 1.4rem;
                     font-weight: bold;

@@ -1,0 +1,21 @@
+// Mixin.
+@mixin bgc($bgc) {
+    background-color: $bgc;
+}
+
+@mixin cube($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin contentAlignFlex($dir: "left") {
+    display: flex;
+
+    @if $dir =="right" {
+        justify-content: right;
+    }
+
+    @else if $dir =="center" {
+        justify-content: center;
+    }
+}

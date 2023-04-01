@@ -1,16 +1,5 @@
-// Variable.
-$dGreenColor: #223e3f;
-$promoColor: #dfeee2;
-
-// Mixin.
-@mixin bgc($bgc) {
-    background-color: $bgc;
-}
-
-@mixin cube($value) {
-    width: $value;
-    height: $value;
-}
+@import './_variables.scss';
+@import './mixins.scss';
 
 .content {
     width: 100%;
