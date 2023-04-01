@@ -8,6 +8,10 @@
     height: $value;
 }
 
+@mixin containerPadding() {
+    width: 117rem !important;
+}
+
 @mixin contentAlignFlex($dir: "left") {
     display: flex;
 

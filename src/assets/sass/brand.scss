@@ -1,0 +1,23 @@
+@import './variables';
+@import './mixins';
+
+.brand-block {
+    display: flex;
+    justify-content: center;
+
+    .brand-wrap {
+        @include containerPadding();
+        margin: 5rem 0;
+
+        .brand-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .brand-item {
+                opacity: 0.5;
+                max-width: 15rem;
+            }
+        }
+    }
+}
