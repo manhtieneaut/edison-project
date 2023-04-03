@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Pagination from '../Pagination';
 
 import '../../assets/sass/base.scss';
 import '../../assets/sass/product/productList.scss';
@@ -7,20 +8,32 @@ import '../../assets/sass/product/productList.scss';
 const ProductList = () => {
   const navigate = useNavigate();
   const [post, setPost] = useState();
-  const [skip, setSkip] = useState('0');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalProducts, setTotalProducts] = useState(0);
 
+
+  useEffect(() => {
+    const getTotalProducts = async () => {
+      try {
+        let response = await fetch(`https://dummyjson.com/products?select=_id`);
+        let data = await response.json();
+        setTotalProducts(data.total);
+      } catch (error) { }
+    };
+    getTotalProducts();
+  }, []);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        let response = await fetch(`https://dummyjson.com/products?limit=6&skip=${skip}&select=title,price,images`);
+        let response = await fetch(`https://dummyjson.com/products?limit=6&skip=${(currentPage-1)*6}&select=title,price,images`);
         let data = await response.json();
-        // console.log(data)
         setPost(data.products);
       } catch (error) { }
     };
     getData();
-  }, [skip]);
+  }, [currentPage]);
+  
 
 
   const addToCart = (item) => {
@@ -39,16 +52,6 @@ const ProductList = () => {
     navigate('/Cart');
 
   };
-
-
-  const onPrevPage = () => {
-    let value = skip - 4;
-    setSkip(value)
-  }
-  const onNextPage = () => {
-    let value = skip + 4;
-    setSkip(value)
-  }
 
   return (
     <div class="product-section">
@@ -79,6 +82,11 @@ const ProductList = () => {
           </div>
         </div>
       </div>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={Math.ceil(totalProducts / 6)}
+        onChangePage={(page) => setCurrentPage(page)}
+      />
     </div>
   )
 }
