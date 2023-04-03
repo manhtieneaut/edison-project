@@ -6,13 +6,9 @@ import {
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 import Cart from './components/CartAPI';
-// import Pagination from './components/Pagination/Pagination';
-import LoginTest from './components/Auth/Login';
-import RegisterTest from './components/Auth/Register';
-
-import Login from './components/Login/Login';
-import SignUp from './components/Login/SignUp';
 
 const routerContext = createBrowserRouter([
     {
@@ -24,20 +20,12 @@ const routerContext = createBrowserRouter([
         element: <HomePage></HomePage>
     },
     {
-        path: '/LoginTest',
-        element: <LoginTest></LoginTest>
+        path: '/Login',
+        element: <LoginPage></LoginPage>
     },
     {
-        path: '/RegisterTest',
-        element: <RegisterTest></RegisterTest>
-    },
-    {
-        path: '/login',
-        element: <Login></Login>
-    },
-    {
-        path: '/signup',
-        element: <SignUp></SignUp>
+        path: '/Register',
+        element: <RegisterPage></RegisterPage>
     },
     {
         path: "/Product",
@@ -51,11 +39,7 @@ const routerContext = createBrowserRouter([
         path: "/Cart",
         element: <Cart></Cart>
 
-    },
-    // {
-    //     path: "/Pagination",
-    //     element: <Pagination></Pagination>
-    // }
+    }
 ])
 
 function router() {

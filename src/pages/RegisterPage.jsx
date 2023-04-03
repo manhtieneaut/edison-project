@@ -1,6 +1,6 @@
 import Advertise from "../components/Advertise";
 import Header from "../components/Header";
-import SignUp from "../components/Login/SignUp";
+import Register from "../components/Auth/Register";
 import Footer from "../components/Footer";
 
 export default function LoginPage() {
@@ -8,7 +8,7 @@ export default function LoginPage() {
     <>
       <Advertise></Advertise>
       <Header></Header>
-      <SignUp></SignUp>
+      <Register></Register>
       <Footer></Footer>
     </>
   )
