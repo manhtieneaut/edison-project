@@ -2,8 +2,8 @@ import '../assets/sass/base.scss';
 import '../assets/sass/header.scss';
 
 // Import SVG.
-import HeaderSigninIcon from '../assets/images/headerImages/HeaderSigninIcon.svg';
-import HeaderCartIcon from '../assets/images/headerImages/HeaderCartIcon.svg';
+import HeaderSigninIcon from '../assets/images/headerImages/headerSigninIcon.svg';
+import HeaderCartIcon from '../assets/images/headerImages/headerCartIcon.svg';
 
 const Header = () => {
     return (

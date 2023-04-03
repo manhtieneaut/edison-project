@@ -1,5 +1,5 @@
-@import './variables';
-@import './mixins';
+@import './_variables.scss';
+@import './_mixins.scss';
 
 :root {
     --white-color: #fff;
@@ -18,6 +18,8 @@ html {
     line-height: 2.9rem;
     font-family: "Jost", sans-serif;
     box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 
     .grid {
         width: 120rem;

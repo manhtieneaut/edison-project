@@ -1,13 +1,16 @@
+import Advertise from "../components/Advertise";
 import Header from "../components/Header";
 import Login from "../components/Login/Login";
 import Footer from "../components/Footer";
 
-export default function LoginPage() {
+const LoginPage = () => {
   return (
-    <div>
-        <Header></Header>
-        <Login></Login>
-        <Footer></Footer>
-    </div>
+    <>
+      <Advertise></Advertise>
+      <Header></Header>
+      <Login></Login>
+      <Footer></Footer>
+    </>
   )
 }
+export default LoginPage;

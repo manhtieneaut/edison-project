@@ -26,14 +26,14 @@ const ProductList = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        let response = await fetch(`https://dummyjson.com/products?limit=6&skip=${(currentPage-1)*6}&select=title,price,images`);
+        let response = await fetch(`https://dummyjson.com/products?limit=6&skip=${(currentPage - 1) * 6}&select=title,price,images`);
         let data = await response.json();
         setPost(data.products);
       } catch (error) { }
     };
     getData();
   }, [currentPage]);
-  
+
 
 
   const addToCart = (item) => {

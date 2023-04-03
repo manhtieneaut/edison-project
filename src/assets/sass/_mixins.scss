@@ -23,3 +23,49 @@
         justify-content: center;
     }
 }
+
+@mixin posRelativeAlign($dir) {
+    @if $dir =="center" {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @else if $dir =="middle" {
+        position: relative;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    @else if $dir =="all" {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin posAbsoluteAlign($dir) {
+    @if $dir =="center" {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @else if $dir =="middle" {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    @else if $dir =="all" {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

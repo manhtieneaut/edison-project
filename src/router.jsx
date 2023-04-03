@@ -8,6 +8,9 @@ import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
 import Cart from './components/CartAPI';
 // import Pagination from './components/Pagination/Pagination';
+import LoginTest from './components/Auth/Login';
+import RegisterTest from './components/Auth/Register';
+
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
 
@@ -21,11 +24,19 @@ const routerContext = createBrowserRouter([
         element: <HomePage></HomePage>
     },
     {
-        path: '/Login',
+        path: '/LoginTest',
+        element: <LoginTest></LoginTest>
+    },
+    {
+        path: '/RegisterTest',
+        element: <RegisterTest></RegisterTest>
+    },
+    {
+        path: '/login',
         element: <Login></Login>
     },
     {
-        path: '/SignUp',
+        path: '/signup',
         element: <SignUp></SignUp>
     },
     {
