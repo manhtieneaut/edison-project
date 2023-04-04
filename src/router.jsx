@@ -42,10 +42,9 @@ const routerContext = createBrowserRouter([
     }
 ])
 
-function router() {
+const router = () => {
     return (
-        <RouterProvider router={routerContext}>
-        </RouterProvider>
+        <RouterProvider router={routerContext}></RouterProvider>
     )
 }
 export default router;
