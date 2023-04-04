@@ -38,7 +38,6 @@ const routerContext = createBrowserRouter([
     {
         path: "/Cart",
         element: <Cart></Cart>
-
     }
 ])
 

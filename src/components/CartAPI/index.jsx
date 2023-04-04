@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router";
 const Cart = () => {
   // const [data, setData] = useState([])
   // const { userId } = useParams();
