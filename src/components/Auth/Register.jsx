@@ -4,27 +4,15 @@ import '../../assets/sass/base.scss';
 import '../../assets/sass/auth.scss';
 
 const Register = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [userName, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [values, setValues] = useState({ name: '', email: '', userName: '', password: '' });
 
-    const onChangeName = (event) => {
-        setName(event.target.value);
-    }
-    const onChangeEmail = (event) => {
-        setEmail(event.target.value);
-    }
-    const onChangeUserName = (event) => {
-        setUsername(event.target.value);
-    }
-    const onChangePassword = (event) => {
-        setPassword(event.target.value);
+    const onChangeValues = (event) => {
+        setValues({ ...values, [event.target.name]: event.target.value });
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(name + " " + email + " " + userName + " " + password);
+        alert(values.name + " " + values.email + " " + values.userName + " " + values.password);
     }
 
     return (
@@ -42,25 +30,25 @@ const Register = () => {
                                 </label>
                                 <input type="text" className="defaut-input-block" maxLength="256" name="Name" data-name="Name"
                                     placeholder="Type Your Name" id="sign-name"
-                                    value={name} onChange={onChangeName} required />
+                                    defaultValue={values.name} onChange={onChangeValues} required />
                                 <label htmlFor="Login-Email" className="defaut-input-label">
                                     <strong>Email Address</strong>
                                 </label>
                                 <input type="email" className="defaut-input-block " maxLength="256" name="email"
                                     data-name="Email" placeholder="Type Your Email" id="Login-Email"
-                                    value={email} onChange={onChangeEmail} required />
+                                    defaultValue={values.email} onChange={onChangeValues} required />
                                 <label htmlFor="Login-UserName" className="defaut-input-label">
                                     <strong>User Name</strong>
                                 </label>
                                 <input type="text" className="defaut-input-block " maxLength="256" name="userName"
                                     data-name="userName" placeholder="Type Your User Name" id="Login-UserName"
-                                    value={userName} onChange={onChangeUserName} required />
+                                    defaultValue={values.userName} onChange={onChangeValues} required />
                                 <label htmlFor="Login-Password" className="defaut-input-label">
                                     <strong>Password</strong>
                                 </label>
                                 <input type="password" className="defaut-input-block" maxLength="256" name="Password"
                                     data-name="Password" placeholder="Type Your Password" id="Login-Password"
-                                    value={password} onChange={onChangePassword} required />
+                                    defaultValue={values.password} onChange={onChangeValues} required />
                                 <input type="submit" value="Register" data-wait="Please wait..."
                                     className="button-black-medium" onClick={handleSubmit} />
                             </form>
