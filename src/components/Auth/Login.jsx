@@ -22,7 +22,6 @@ const Login = () => {
     }
 
     const onSubmit = (event) => {
-        event.preventDefault();
         // colRef.
         const colRef = collection(db, "users");
         getDocs(colRef).then((snapshot) => {
@@ -44,10 +43,10 @@ const Login = () => {
                 <div className="user-page-block">
                     <div className="user-page-inner-block">
                         <h2 className="user-page-title">Login</h2>
-                        <div>Please fill your email and password to login</div>
+                        <div>Please fill your username and password to login</div>
                         <div className="user-form-block">
-                            <form id="email-form" name="email-form" data="Email-form" method="get" className="user-inner-block"
-                                aria-label="Email-form" onSubmit={handleSubmit(onSubmit)}>
+                            <form id="login-form" name="login-form" data="login-form" method="get" className="user-inner-block"
+                                aria-label="login-form" onSubmit={handleSubmit(onSubmit)}>
                                 <label htmlFor="userName" className="defaut-input-label">
                                     <strong>UserName</strong>
                                 </label>
