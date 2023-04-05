@@ -1,10 +1,6 @@
 import '../assets/sass/base.scss';
 import '../assets/sass/header.scss';
 
-// Import SVG.
-import HeaderSigninIcon from '../assets/images/headerImages/headerSigninIcon.svg';
-import HeaderCartIcon from '../assets/images/headerImages/headerCartIcon.svg';
-
 const Header = () => {
     return (
         <header className="header">
@@ -40,11 +36,10 @@ const Header = () => {
                                 </div>
                             </form>
                             <a href="/#">
-                                <img src={HeaderSigninIcon} alt="Signin-btn"
-                                    className="header-signin-btn" />
+                                <i class="fa-solid fa-user header-signin-icon"></i>
                             </a>
                             <a href="/#">
-                                <img src={HeaderCartIcon} alt="Cart-btn" className="header-cart-btn" />
+                                <i class="fa-solid fa-cart-shopping header-cart-icon"></i>
                             </a>
                         </div>
                     </div>

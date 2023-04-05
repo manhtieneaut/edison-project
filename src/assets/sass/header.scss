@@ -115,13 +115,29 @@ $bgSecColor: #fff;
                     }
 
                     a {
+                        width: 3.2rem;
+                        height: 3.2rem;
+                        border: 1px solid $g_textColor;
+                        border-radius: 50%;
+                        position: relative;
+                        transform: translateY(50%);
 
-                        .header-signin-btn,
-                        .header-cart-btn {
-                            margin: 1rem 0;
-                            padding: 5px;
-                            border: solid 1px var(--black-color);
-                            border-radius: 50%;
+                        .header-signin-icon {
+                            font-size: 1.8rem;
+                            color: $g_textColor;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        .header-cart-icon {
+                            font-size: 1.8rem;
+                            color: $g_textColor;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -45%);
                         }
                     }
                 }
