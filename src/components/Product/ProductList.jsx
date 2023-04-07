@@ -1,6 +1,7 @@
+import Pagination from '../Pagination/Pagination';
+
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Pagination from '../Pagination';
 
 import '../../assets/sass/base.scss';
 import '../../assets/sass/product/productList.scss';
@@ -80,13 +81,13 @@ const ProductList = () => {
               );
             })}
           </div>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={Math.ceil(totalProducts / 6)}
+            onChangePage={(page) => setCurrentPage(page)}
+          ></Pagination>
         </div>
       </div>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={Math.ceil(totalProducts / 6)}
-        onChangePage={(page) => setCurrentPage(page)}
-      />
     </div>
   )
 }

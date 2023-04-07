@@ -4,6 +4,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Brand from '../components/Brand';
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
+import Copyright from "../components/Copyright";
 
 const AboutUsPage = () => {
     return (
@@ -14,6 +15,7 @@ const AboutUsPage = () => {
             <Brand></Brand>
             <NewsLetter></NewsLetter>
             <Footer></Footer>
+            <Copyright></Copyright>
         </>
     )
 }
