@@ -1,5 +1,6 @@
 import Advertise from "../components/Common/Advertise";
 import Header from "../components/Common/Header";
+import HeaderBottom from "../components/Common/HeaderBottom";
 import AboutUs from "../components/AboutUs/AboutUs";
 import Brand from '../components/Common/Brand';
 import NewsLetter from "../components/Common/NewsLetter";
@@ -11,6 +12,7 @@ const AboutUsPage = () => {
         <>
             <Advertise></Advertise>
             <Header></Header>
+            <HeaderBottom></HeaderBottom>
             <AboutUs></AboutUs>
             <Brand></Brand>
             <NewsLetter></NewsLetter>

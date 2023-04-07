@@ -1,32 +1,38 @@
 import '../../assets/sass/base/base.scss';
 import '../../assets/sass/common/header.scss';
 
+import { useNavigate } from 'react-router-dom';
+
 const Header = () => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/Product");
+    }
     return (
         <header className="header">
             <div className="header-background">
                 <div className="header-background-primary"></div>
                 <div className="header-background-secondary"></div>
             </div>
-            <div className="header-section">
-                <div className="header-top">
+            <div className="header-top-section">
+                <div className="header-top-block">
                     <div className="header-top-wrap contentPadding">
-                        <a href="/#" className="header-logo">
+                        <a href="/Home" className="header-logo">
                             <img src={require('../../assets/images/headerImages/HeaderLogo.png')}
                                 alt="header-logo" className='header-img' />
                         </a>
                         <nav className="navbar">
                             <div className="navItem">
-                                <a href="/#">Home</a>
+                                <a href="/Home">Home</a>
                             </div>
                             <div className="navItem">
-                                <a href="/#">Pages</a>
+                                <a href="/About">About</a>
                             </div>
                             <div className="navItem">
-                                <a href="/#">About</a>
+                                <a href="/Contact">Contact</a>
                             </div>
                             <div className="navItem">
-                                <a href="/#">Contact</a>
+                                <a href="/Terms">Terms & Condition</a>
                             </div>
                         </nav>
                         <div className="header-top-form">
@@ -36,7 +42,7 @@ const Header = () => {
                                     <input type="submit" value="" className="header-search-submit" />
                                 </div>
                             </form>
-                            <a href="/#">
+                            <a href="/Login">
                                 <i class="fa-solid fa-user header-signin-icon"></i>
                             </a>
                             <a href="/#">
@@ -45,7 +51,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container-center">
+                <div className="header-middle-section">
                     <div className="header-slider">
                         <div className="slider-left">
                             <p className="slider-left-slogan">
@@ -61,25 +67,16 @@ const Header = () => {
                                 ex?
                                 Autem ab, repellat placeat voluptatibus eveniet architecto!
                             </p>
-                            <button className="slider-left-btn">shop now</button>
+                            <button className="slider-left-btn" onClick={handleClick}>
+                                shop now
+                            </button>
                         </div>
                         <div className="slider-right">
-                            <a href="/#" className='advertise-aside-wrap'>
+                            <a href="/Product" className='advertise-aside-wrap'>
                                 <img src={require("../../assets/images/headerImages/laptopAdvertise.png")}
                                     alt="advertise-aside" className='advertise-aside' />
                             </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container-right">
-                <div className="header-bottom">
-                    <div className="header-bottom-img">
-                        <img src={require('../../assets/images/headerImages/header-bottom-image.jpg')}
-                            alt="header-bottom-img" className='header-bottom-image' />
-                    </div>
-                    <div className="header-bWrap">
-                        <button className="header-bWrap-btn">shop now</button>
                     </div>
                 </div>
             </div>

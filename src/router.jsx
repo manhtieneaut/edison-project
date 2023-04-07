@@ -4,10 +4,12 @@ import {
 }
     from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import ProductPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUsPage';
+import ContactUsPage from './pages/ContactUsPage';
+import TermsPage from './pages/TermsPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import ProductPage from './pages/ProductPage';
 import Cart from './components/CartAPI';
 
 const routerContext = createBrowserRouter([
@@ -20,6 +22,18 @@ const routerContext = createBrowserRouter([
         element: <HomePage></HomePage>
     },
     {
+        path: "/About",
+        element: <AboutUsPage></AboutUsPage>
+    },
+    {
+        path: "/Contact",
+        element: <ContactUsPage></ContactUsPage>
+    },
+    {
+        path: "/Terms",
+        element: <TermsPage></TermsPage>
+    },
+    {
         path: '/Login',
         element: <LoginPage></LoginPage>
     },
@@ -30,10 +44,6 @@ const routerContext = createBrowserRouter([
     {
         path: "/Product",
         element: <ProductPage></ProductPage>
-    },
-    {
-        path: "/About",
-        element: <AboutUsPage></AboutUsPage>
     },
     {
         path: "/Cart",
