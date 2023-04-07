@@ -36,12 +36,6 @@ const Header = () => {
                             </div>
                         </nav>
                         <div className="header-top-form">
-                            <form action="/#" method="post" className='header-top-form-block'>
-                                <div className="header-top-form-wrap">
-                                    <input type="text" placeholder="Search" maxlength="256" className="header-search-input" />
-                                    <input type="submit" value="" className="header-search-submit" />
-                                </div>
-                            </form>
                             <a href="/Login">
                                 <i class="fa-solid fa-user header-signin-icon"></i>
                             </a>
