@@ -1,4 +1,4 @@
-import '../../assets/sass/base.scss';
+import '../../assets/sass/base/base.scss';
 import '../../assets/sass/product/pagination.scss';
 
 const Pagination = ({ currentPage, totalPages, onChangePage }) => {

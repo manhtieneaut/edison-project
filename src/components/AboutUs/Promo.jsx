@@ -1,5 +1,5 @@
-import "../../assets/sass/base.scss";
-import "../../assets/sass/about.scss";
+import '../../assets/sass/base/base.scss';
+import '../../assets/sass/about/promo.scss';
 
 import promoItem1 from '../../assets/images/aboutImages/aboutPromo/promoItem1.svg';
 import promoItem2 from '../../assets/images/aboutImages/aboutPromo/promoItem2.svg';

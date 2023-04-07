@@ -1,5 +1,5 @@
-import '../assets/sass/base.scss';
-import '../assets/sass/header.scss';
+import '../../assets/sass/base/base.scss';
+import '../../assets/sass/common/header.scss';
 
 const Header = () => {
     return (
@@ -12,7 +12,7 @@ const Header = () => {
                 <div className="header-top">
                     <div className="header-top-wrap contentPadding">
                         <a href="/#" className="header-logo">
-                            <img src={require('../assets/images/headerImages/HeaderLogo.png')}
+                            <img src={require('../../assets/images/headerImages/HeaderLogo.png')}
                                 alt="header-logo" className='header-img' />
                         </a>
                         <nav className="navbar">
@@ -65,7 +65,7 @@ const Header = () => {
                         </div>
                         <div className="slider-right">
                             <a href="/#" className='advertise-aside-wrap'>
-                                <img src={require("../assets/images/headerImages/laptopAdvertise.png")}
+                                <img src={require("../../assets/images/headerImages/laptopAdvertise.png")}
                                     alt="advertise-aside" className='advertise-aside' />
                             </a>
                         </div>
@@ -75,7 +75,7 @@ const Header = () => {
             <div className="container-right">
                 <div className="header-bottom">
                     <div className="header-bottom-img">
-                        <img src={require('../assets/images/headerImages/header-bottom-image.jpg')}
+                        <img src={require('../../assets/images/headerImages/header-bottom-image.jpg')}
                             alt="header-bottom-img" className='header-bottom-image' />
                     </div>
                     <div className="header-bWrap">

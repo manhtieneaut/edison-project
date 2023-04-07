@@ -5,7 +5,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/firebase-config';
 
-import '../../assets/sass/base.scss';
+import '../../assets/sass/base/base.scss';
 import '../../assets/sass/auth.scss';
 
 const Login = () => {

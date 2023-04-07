@@ -3,7 +3,7 @@ import Pagination from '../Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import '../../assets/sass/base.scss';
+import '../../assets/sass/base/base.scss';
 import '../../assets/sass/product/productList.scss';
 
 const ProductList = () => {

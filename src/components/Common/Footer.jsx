@@ -1,5 +1,5 @@
-import '../assets/sass/base.scss';
-import '../assets/sass/footer.scss';
+import '../../assets/sass/base/base.scss';
+import '../../assets/sass/common/footer.scss';
 
 const Footer = () => {
     return (
@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="nav-list">
                     <div className="nav-list-wrap">
                         <a href="/#" className='footer-logo'>
-                            <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="footer-logo" className="footer-img" />
+                            <img src={require('../../assets/images/headerImages/HeaderLogo.png')} alt="footer-logo" className="footer-img" />
                         </a>
                         <p className="nav-list-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, repudiandae.
