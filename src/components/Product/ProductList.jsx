@@ -1,9 +1,8 @@
 import Pagination from '../Pagination/Pagination';
-import Search from '../Search';
-import SortFilter from '../Sort-Filter';
 import Search from '../Search/Search';
+import SortFilter from '../Filter/Filter';
 
-import { searchProduct,filterProduct } from '../../Redux/productSlice';
+import { searchProduct, filterProduct } from '../../Redux/productSlice';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
