@@ -108,6 +108,8 @@
                 }
             }
 
+
+
             .promo-title {
                 margin: 3rem 0;
                 font-family: 'Playfair Display', sans-serif;
@@ -135,6 +137,23 @@
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 cursor: pointer;
+            }
+
+            @media only screen and (max-width: 2560px) {
+                .promo-advertise {
+                    font-size: 1.2rem;
+                    margin: 1rem 0;
+                }
+
+                .promo-title {
+                    font-size: 3.6rem;
+                    margin: 0;
+                }
+
+                .promo-text {
+                    font-size: 1.2rem;
+                    margin: 1rem 0;
+                }
             }
         }
     }
