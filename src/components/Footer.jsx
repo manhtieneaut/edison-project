@@ -7,11 +7,12 @@ const Footer = () => {
             <div className="footer-wrap">
                 <div className="nav-list">
                     <div className="nav-list-wrap">
-                        <a href="/#">
-                            <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="HeaderLogo" className="footerLogo" />
+                        <a href="/#" className='footer-logo'>
+                            <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="footer-logo" className="footer-img" />
                         </a>
-                        <p className="nav-list-text">Features that we have which lorem ipsum dolor sit amet,
-                            consectetur.</p>
+                        <p className="nav-list-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, repudiandae.
+                        </p>
                         <h3 className="nav-list-title follow-title">Folow us</h3>
                         <div className="social-link">
                             <a href="/#">
@@ -35,11 +36,11 @@ const Footer = () => {
                         <div className="nav-list-link">
                             <a href="/#">Home</a>
                             <a href="/#">About us</a>
-                            <a href="/#">Our blog post</a>
-                            <a href="/#">Contact</a>
-                            <a href="/#">Login</a>
-                            <a href="/#">Register</a>
-                            <a href="/#">Shop</a>
+                            <a href="/#">Contact us</a>
+                            <a href="/#">Category</a>
+                            <a href="/#">Products</a>
+                            <a href="/#">Cart</a>
+                            <a href="/#">Payment</a>
                         </div>
                     </div>
                 </div>
@@ -48,18 +49,19 @@ const Footer = () => {
                         <h3 className="nav-list-title">Information</h3>
                         <div className="nav-list-link">
                             <a href="/#">Terms & Conditions</a>
-                            <a href="/#">Style Guide</a>
-                            <a href="/#">Changelog</a>
-                            <a href="/#">Licenses</a>
+                            <a href="/#">Register</a>
+                            <a href="/#">Login</a>
+                            <a href="/#">Forgot password</a>
+                            <a href="/#">Change password</a>
                         </div>
                     </div>
                 </div>
                 <div className="nav-list">
                     <div className="nav-list-wrap">
                         <h3 className="nav-list-title">Contact Us</h3>
-                        <p className="nav-list-text">256, Central City, Borlex House Main town, New York, USA</p>
-                        <h3 className="nav-list-title">+880(12) 125 48765</h3>
-                        <p className="nav-list-text">www.examples.com</p>
+                        <h3 className="nav-list-text">+(84) 822206919</h3>
+                        <h3 className="nav-list-text">Nguyễn Hồng Quân</h3>
+                        <p className="nav-list-text">maiyonaisu1102@gmail.com</p>
                     </div>
                 </div>
             </div>

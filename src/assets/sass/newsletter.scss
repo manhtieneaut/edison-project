@@ -2,8 +2,8 @@
 @import './mixins.scss';
 
 .newsletter-section {
+    @include bgc($dVioletColor);
     width: 100%;
-    background-color: #223e3f;
     height: 21.5rem;
     position: relative;
 

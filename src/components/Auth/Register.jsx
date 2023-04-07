@@ -11,15 +11,32 @@ const Register = () => {
             criteriaMode: "all"
         }
     );
-    const [values, setValues] = useState({ name: '', email: '', userName: '', password: '' });
+    const [values, setValues] = useState({
+        name: '',
+        email: '',
+        userName: '',
+        password: '',
+        rePassword: '',
+        isRead: false
+    });
 
     const onChangeValues = (event) => {
-        event.preventDefault();
-        setValues({ ...values, [event.target.name]: event.target.value });
+        if (event.target.name === 'registerTerm') {
+            setValues({
+                ...values,
+                [event.target.name]: !values.isRead,
+            });
+        } else {
+            event.preventDefault();
+            setValues({
+                ...values,
+                [event.target.name]: event.target.value
+            });
+        }
     }
 
     const onSubmit = (event) => {
-        alert(values.name + " " + values.email + " " + values.userName + " " + values.password);
+        alert(values.name + " " + values.email + " " + values.userName + " " + values.password + " " + values.rePassword);
     }
 
     return (
@@ -39,18 +56,18 @@ const Register = () => {
                                     placeholder="Type Your Name" id="register-name"
                                     defaultValue={values.name}
                                     {...register("name", {
-                                        required: "This input is required.",
+                                        required: "This input is required!",
                                         minLength: {
                                             value: 6,
-                                            message: "This input must exceed 6 characters"
+                                            message: "This input must exceed 6 characters!"
                                         },
                                         maxLength: {
                                             value: 256,
-                                            message: "This input must not exceed 256 characters"
+                                            message: "This input must not exceed 256 characters!"
                                         },
                                         pattern: {
                                             value: /^[a-zA-Z0-9 ]*$/,
-                                            message: "This input must contains no special characters"
+                                            message: "This input must contains no special characters!"
                                         },
                                     })}
                                     onChange={onChangeValues} />
@@ -71,18 +88,18 @@ const Register = () => {
                                     data-name="register-email" placeholder="Type Your Email" id="register-email"
                                     defaultValue={values.email}
                                     {...register("email", {
-                                        required: "This input is required.",
+                                        required: "This input is required!",
                                         minLength: {
                                             value: 6,
-                                            message: "This input must exceed 6 characters"
+                                            message: "This input must exceed 6 characters!"
                                         },
                                         maxLength: {
                                             value: 256,
-                                            message: "This input must not exceed 256 characters"
+                                            message: "This input must not exceed 256 characters!"
                                         },
                                         pattern: {
                                             value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                                            message: "Incorrect email format"
+                                            message: "Incorrect email format!"
                                         }
                                     })}
                                     onChange={onChangeValues} />
@@ -103,18 +120,18 @@ const Register = () => {
                                     data-name="register-username" placeholder="Type Your User Name" id="register-username"
                                     defaultValue={values.userName}
                                     {...register("userName", {
-                                        required: "This input is required.",
+                                        required: "This input is required!",
                                         minLength: {
                                             value: 6,
-                                            message: "This input must exceed 6 characters"
+                                            message: "This input must exceed 6 characters!"
                                         },
                                         maxLength: {
                                             value: 256,
-                                            message: "This input must not exceed 256 characters"
+                                            message: "This input must not exceed 256 characters!"
                                         },
                                         pattern: {
                                             value: /^[a-zA-Z0-9]*$/,
-                                            message: "This input must contains no special characters"
+                                            message: "This input must contains no special characters!"
                                         },
                                     })}
                                     onChange={onChangeValues} />
@@ -135,14 +152,14 @@ const Register = () => {
                                     data-name="register-password" placeholder="Type Your Password" id="register-password"
                                     defaultValue={values.password}
                                     {...register("password", {
-                                        required: "This input is required.",
+                                        required: "This input is required!",
                                         minLength: {
                                             value: 6,
-                                            message: "This input must exceed 6 characters"
+                                            message: "This input must exceed 6 characters!"
                                         },
                                         maxLength: {
                                             value: 256,
-                                            message: "This input must not exceed 256 characters"
+                                            message: "This input must not exceed 256 characters!"
                                         }
                                     })}
                                     onChange={onChangeValues} />
@@ -156,14 +173,71 @@ const Register = () => {
                                             : null;
                                     }
                                     }></ErrorMessage>
+                                <label htmlFor="register-password-retype" className="defaut-input-label">
+                                    <strong>Retype Password</strong>
+                                </label>
+                                <input type="password" className="defaut-input-block" maxLength="256" name="register-password-retype"
+                                    data-name="register-password-retype" placeholder="Retype Your Password" id="register-password-retype"
+                                    defaultValue={values.rePassword}
+                                    {...register("rePassword", {
+                                        required: "This input is required!",
+                                        minLength: {
+                                            value: 6,
+                                            message: "This input must exceed 6 characters!"
+                                        },
+                                        maxLength: {
+                                            value: 256,
+                                            message: "This input must not exceed 256 characters!"
+                                        },
+                                        validate: {
+                                            samePassword: value => value === values.password ||
+                                                "Password & RetypePassword must be the same!"
+                                        }
+                                    })}
+                                    onChange={onChangeValues} />
+                                <ErrorMessage
+                                    errors={errors}
+                                    name="rePassword"
+                                    render={({ messages }) => {
+                                        return messages ? Object.entries(messages).map(([type, message]) => (
+                                            <span className='error-message' key={type}>{message}</span>
+                                        ))
+                                            : null;
+                                    }
+                                    }></ErrorMessage>
                                 <input type="submit" value="Register" data-wait="Please wait..."
                                     className="button-black-medium" />
                             </form>
                         </div>
                     </div>
                     <div className="user-bottom-block">
-                        <div>I have read and agree to the?</div>
+                        <input
+                            type="checkbox"
+                            name="register-term"
+                            id="register-term"
+                            className="register-term"
+                            defaultValue={values.isRead}
+                            {...register("registerTerm", {
+                                validate: {
+                                    isRead: value => value === true ||
+                                        "You must agree with our term!"
+                                },
+                            })}
+                            onChange={onChangeValues} />
+                        <label htmlFor="register-term" className="defaut-input-label">
+                            <strong>I have read and agree to our term?</strong>
+                        </label>
                         <a href="/#" className='user-bottom-link'>Terms & Conditions</a>
+                        <ErrorMessage
+                            errors={errors}
+                            name="registerTerm"
+                            render={({ messages }) => {
+                                return messages ? Object.entries(messages).map(([type, message]) => (
+                                    <span className='error-message' key={type}>{message}</span>
+                                ))
+                                    : null;
+                            }
+                            }></ErrorMessage>
                     </div>
                     <div className="user-bottom-block">
                         <div>Have an account?</div>

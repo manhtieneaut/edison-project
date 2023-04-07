@@ -16,7 +16,12 @@
 
             .brand-item {
                 opacity: 0.5;
-                max-width: 15rem;
+                max-width: 9.5rem;
+
+                &-image {
+                    width: 100%;
+                    height: calc(width);
+                }
             }
         }
     }

@@ -15,9 +15,9 @@
         .welcome-left {
             width: 50%;
 
-            .aboutDiscount {
+            .about-discount {
                 width: 100%;
-                height: 100%;
+                height: calc(width);
             }
         }
 
@@ -28,13 +28,14 @@
             &-title {
                 font-family: 'Playfair Display', serif;
                 font-size: 4.6rem;
+                color: $dVioletColor;
             }
 
             &-stext {
                 font-size: 1.8rem;
                 font-weight: 500;
                 line-height: 1.77;
-                color: $dGreenColor;
+                color: $dVioletColor;
             }
 
             &-text {
@@ -55,7 +56,7 @@
             text-align: center;
 
             .funfact-title {
-                color: $dGreenColor;
+                color: $dVioletColor;
                 font-size: 4.6rem;
                 font-family: 'Playfair Display', serif;
                 line-height: 1.25;
@@ -64,7 +65,7 @@
             }
 
             .funfact-text {
-                color: $dGreenColor;
+                color: $dVioletColor;
                 font-family: 'Jost', sans-serif;
                 font-size: 1.8rem;
                 line-height: 2;
@@ -153,9 +154,8 @@
         position: relative;
 
         .promo-image {
-            .aboutPromo {
+            .about-promo-image {
                 width: 100%;
-                height: 100%;
             }
         }
 
@@ -164,7 +164,7 @@
             width: 42.5rem;
             height: 26.5rem;
             padding: 0 5.5rem 0;
-            top: 10rem;
+            top: 0;
             left: 0;
 
             .promo-advertise {
@@ -187,6 +187,7 @@
                 font-family: 'Playfair Display', sans-serif;
                 font-size: 4.6rem;
                 color: $promoColor;
+                white-space: nowrap;
             }
 
             .promo-text {
