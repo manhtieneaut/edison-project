@@ -118,7 +118,7 @@ const Login = () => {
                     </div>
                     <div className="user-bottom-block">
                         <div>Don't have account?</div>
-                        <a href="/#" className='user-bottom-link'>Register</a>
+                        <a href="/Register" className='user-bottom-link'>Register</a>
                     </div>
                 </div>
             </div>

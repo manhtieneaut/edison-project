@@ -227,7 +227,7 @@ const Register = () => {
                         <label htmlFor="register-term" className="defaut-input-label">
                             <strong>I have read and agree to our term?</strong>
                         </label>
-                        <a href="/#" className='user-bottom-link'>Terms & Conditions</a>
+                        <a href="/Terms" className='user-bottom-link'>Terms & Conditions</a>
                         <ErrorMessage
                             errors={errors}
                             name="registerTerm"
@@ -241,7 +241,7 @@ const Register = () => {
                     </div>
                     <div className="user-bottom-block">
                         <div>Have an account?</div>
-                        <a href="/#" className='user-bottom-link'>Login</a>
+                        <a href="/Login" className='user-bottom-link'>Login</a>
                     </div>
                 </div>
             </div>
