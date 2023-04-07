@@ -10,6 +10,12 @@ export const searchProduct = createAsyncThunk('product/searchProduct', async (ke
   console.log(data)
   return data.products;
 });
+export const filterProduct = createAsyncThunk('product/filterProduct', async (key, thunkAPI) => {
+  const response = await fetch(`https://dummyjson.com/products/category/${key}`);
+  const data = await response.json();
+  console.log(data)
+  return data.products;
+});
 
 export const productSlice = createSlice({
   name: 'product',
@@ -21,6 +27,9 @@ export const productSlice = createSlice({
   },
   extraReducers: {
     [searchProduct.fulfilled]: (state, action) => {
+      state.products = action.payload;
+    },
+    [filterProduct.fulfilled]: (state, action) => {
       state.products = action.payload;
     },
   }
