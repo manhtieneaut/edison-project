@@ -1,5 +1,8 @@
 import Pagination from '../Pagination/Pagination';
+import Search from '../Search';
 
+import { searchProduct } from '../../Redux/productSlice';
+import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,10 +11,21 @@ import '../../assets/sass/product/productList.scss';
 
 const ProductList = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [post, setPost] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
 
+  
+  const handleSearch = (key) => {
+    dispatch(searchProduct(key))
+      .then((action) => {
+        setPost(action.payload);
+      })
+      .catch((error) => {
+        console.error('Error searching products:', error);
+      });
+  };
 
   useEffect(() => {
     const getTotalProducts = async () => {
@@ -62,6 +76,7 @@ const ProductList = () => {
             <h2 class="product-title">Product Collections</h2>
             <p class="product-title-desc">Most Selling and Trending Product</p>
           </div>
+          <Search onSearch={handleSearch} />
           <div class="product-items">
             {post?.map(item => {
               return (
