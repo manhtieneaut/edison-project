@@ -14,13 +14,18 @@ const Login = () => {
             criteriaMode: "all"
         }
     );
-    const [values, setValues] = useState({ userName: '', password: '' });
+    const [values, setValues] = useState({
+        userName: '',
+        password: '',
+    });
 
     const onChangeValues = (event) => {
         event.preventDefault();
-        setValues({ ...values, [event.target.name]: event.target.value });
+        setValues({
+            ...values,
+            [event.target.name]: event.target.value
+        });
     }
-
     const onSubmit = (event) => {
         // colRef.
         const colRef = collection(db, "users");
@@ -37,6 +42,7 @@ const Login = () => {
             console.log(err);
         })
     }
+
     return (
         <div className="main-wrapper" >
             <div className="section-gap-120">
@@ -54,19 +60,19 @@ const Login = () => {
                                     data-name="userName" placeholder="Type Your User Name" id="userName"
                                     defaultValue={values.userName}
                                     {...register("userName", {
-                                        required: "This input is required.",
+                                        required: "This input is required!",
                                         minLength: {
                                             value: 6,
-                                            message: "This input must exceed 6 characters"
+                                            message: "This input must exceed 6 characters!"
                                         },
                                         maxLength: {
                                             value: 256,
-                                            message: "This input must not exceed 256 characters"
+                                            message: "This input must not exceed 256 characters!"
                                         },
                                         pattern: {
                                             value: /^[a-zA-Z0-9]*$/,
-                                            message: "This input must contains no special characters"
-                                        },
+                                            message: "This input must contains no special characters!"
+                                        }
                                     })}
                                     onChange={onChangeValues} />
                                 <ErrorMessage
@@ -85,14 +91,14 @@ const Login = () => {
                                 <input type="password" className="defaut-input-block" maxLength="256" name="password"
                                     data-name="password" placeholder="Type Your Password" id="password"
                                     defaultValue={values.password} {...register("password", {
-                                        required: "This input is required.",
+                                        required: "This input is required!",
                                         minLength: {
                                             value: 6,
-                                            message: "This input must exceed 6 characters"
+                                            message: "This input must exceed 6 characters!"
                                         },
                                         maxLength: {
                                             value: 256,
-                                            message: "This input must not exceed 256 characters"
+                                            message: "This input must not exceed 256 characters!"
                                         }
                                     })}
                                     onChange={onChangeValues} />

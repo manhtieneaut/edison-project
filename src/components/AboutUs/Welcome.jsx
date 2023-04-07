@@ -6,27 +6,22 @@ const WelcomeComponent = () => {
         <div className="welcome-section contentPadding">
             <div className="welcome-left">
                 <img src={require('../../assets/images/aboutImages/aboutDiscount.png')} alt="aboutDiscount"
-                    className="aboutDiscount" />
+                    className="about-discount" />
             </div>
             <div className="welcome-right">
                 <div className="welcome-right-section">
                     <h3 className="welcome-right-title">
-                        Welcome to Farnic
+                        Welcome to Luxury Cols
                     </h3>
                     <p className="welcome-right-stext">
-                        Provide best quality of Furniture and we always focus on quality, technology and try to make
+                        Provide best quality of technology and we always focus on quality, design and try to make
                         our customer happy
                     </p>
                     <p className="welcome-right-text">
-                        Furniture best dolor sit amet, consectetur adipiscing elit. Duis lectus mauris, ullamcorper
-                        mauris amet, erat amet. Ornare vitae cursus phar purus. Ut enim sed id consectetur velit
-                        ullamcorper a. Tellus, tempus erdiet dui amet bibendum amet, vestibulum. Sed morbi viverra
-                        sit tempor tristique sit. Donec vitae lacu
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad ipsam magni quae tempora, alias architecto ratione magnam laudantium adipisci voluptatibus neque inventore provident aut. Cupiditate sit illum similique dignissimos at?
                     </p>
                     <p className="welcome-right-text">
-                        Furniture best dolor sit amet, consectetur adipiscing elit. Duis lectus mauris, ullamcorper
-                        mauris amet, erat amet. Ornare vitae cursus phar purus. Ut enim sed id consectetur velit
-                        ullamcorper
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam neque, dolores fugit laboriosam, in deleniti placeat iusto aliquid reiciendis aspernatur facilis eaque similique sequi veritatis, expedita autem consequatur alias illum?
                     </p>
                 </div>
             </div>

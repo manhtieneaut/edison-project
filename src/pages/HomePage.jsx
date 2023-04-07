@@ -2,6 +2,7 @@ import Advertise from "../components/Advertise";
 import Header from "../components/Header";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
+import Copyright from "../components/Copyright";
 
 const HomePage = () => {
     return (
@@ -10,6 +11,7 @@ const HomePage = () => {
             <Header></Header>
             <NewsLetter></NewsLetter>
             <Footer></Footer>
+            <Copyright></Copyright>
         </>
     )
 }

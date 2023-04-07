@@ -12,7 +12,8 @@ const Header = () => {
                 <div className="header-top">
                     <div className="header-top-wrap contentPadding">
                         <a href="/#" className="header-logo">
-                            <img src={require('../assets/images/headerImages/HeaderLogo.png')} alt="HeaderLogo" />
+                            <img src={require('../assets/images/headerImages/HeaderLogo.png')}
+                                alt="header-logo" className='header-img' />
                         </a>
                         <nav className="navbar">
                             <div className="navItem">
@@ -45,13 +46,13 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="container-center">
-                    <div className="header-slider contentPadding">
+                    <div className="header-slider">
                         <div className="slider-left">
                             <p className="slider-left-slogan">
                                 100% QUALITY - 100% SATISFACTION
                             </p>
                             <p className="slider-left-title">
-                                Classic & Elegent Furniture
+                                Modern & Smart Technology Devices
                             </p>
                             <p className="slider-left-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, eos illo expedita
@@ -63,8 +64,9 @@ const Header = () => {
                             <button className="slider-left-btn">shop now</button>
                         </div>
                         <div className="slider-right">
-                            <a href="/#">
-                                <img src={require('../assets/images/headerImages/Sofa.png')} alt="sofa" />
+                            <a href="/#" className='advertise-aside-wrap'>
+                                <img src={require("../assets/images/headerImages/laptopAdvertise.png")}
+                                    alt="advertise-aside" className='advertise-aside' />
                             </a>
                         </div>
                     </div>
@@ -73,15 +75,10 @@ const Header = () => {
             <div className="container-right">
                 <div className="header-bottom">
                     <div className="header-bottom-img">
-                        <img src={require('../assets/images/headerImages/HeaderAdvertise.jpg')} alt="header-advertise" />
+                        <img src={require('../assets/images/headerImages/header-bottom-image.jpg')}
+                            alt="header-bottom-img" className='header-bottom-image' />
                     </div>
                     <div className="header-bWrap">
-                        <p className="header-bWrap-category">NEW COLLECTIONS</p>
-                        <p className="header-bWrap-title">Leisure Chair Set</p>
-                        <p className="header-bWrap-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                            eius neque, sequi asperiores
-                            amet a voluptates. Rem ut soluta atque, explicabo placeat ex vitae voluptatibus quod
-                            quisquam id blanditiis cupiditate.</p>
                         <button className="header-bWrap-btn">shop now</button>
                     </div>
                 </div>

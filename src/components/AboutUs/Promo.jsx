@@ -12,8 +12,9 @@ const PromoComponent = () => {
             <div className="promo-left">
                 <div className="promo-desc">
                     <h2 className="promo-left-title">Why We are the Best?</h2>
-                    <p className="promo-left-desc">Features that we have which Lorem ipsum dolor sit amet, consectetur
-                        convallis. Arcu, egestas nec scelerisque mi. Augue proin</p>
+                    <p className="promo-left-desc">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit amet officia at animi recusandae assumenda ratione, quas iure laudantium natus iste et perferendis fugiat asperiores veniam reprehenderit culpa corporis nesciunt.
+                    </p>
                 </div>
                 <div className="promo-items">
                     <div className="promo-item">
@@ -52,15 +53,15 @@ const PromoComponent = () => {
             </div>
             <div className="promo-right">
                 <div className="promo-image">
-                    <img src={require('../../assets/images/aboutImages/aboutPromo.jpg')} alt="aboutPromo" className="aboutPromo" />
+                    <img src={require('../../assets/images/aboutImages/PromoAbout.jpg')} alt="aboutPromo" className="about-promo-image" />
                 </div>
                 <div className="promo-content">
                     <h5 className="promo-advertise">MEGA SALE
-                        <span className="promo-advertise-emphasis">UPTO 75%</span>
+                        <span className="promo-advertise-emphasis"> UP TO 75%</span>
                     </h5>
-                    <h3 className="promo-title">Fancy Sofa set</h3>
+                    <h3 className="promo-title">Apple Iphone 14</h3>
                     <p className="promo-text">
-                        Lorem ipsum dolor sit amet, consectetur scelerisque a tincidunt urna quam
+                        with Dynamic Island Technology
                     </p>
                     <button className="promo-btn">shop now</button>
                 </div>

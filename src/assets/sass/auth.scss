@@ -112,11 +112,22 @@
                 grid-column-gap: 15px;
                 grid-row-gap: 15px;
 
+                .register-term {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 0%;
+                    accent-color: $g_textColor;
+                }
+
                 .user-bottom-link {
                     color: #1e1c1c;
                     font-size: 18px;
                     text-decoration: underline;
                     background-color: transparent;
+                }
+
+                .error-message {
+                    color: red;
                 }
             }
         }

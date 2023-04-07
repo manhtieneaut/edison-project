@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SortFilter = () => {
 
     const [data, setData] = useState();
-    const sortOption = ["home-decoration", "smartphones", "laptops", "fragrances", "skincare","groceries"];
+    const sortOption = ["home-decoration", "smartphones", "laptops", "fragrances", "skincare", "groceries"];
 
     useEffect(() => {
         loadData();

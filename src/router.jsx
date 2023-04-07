@@ -32,7 +32,7 @@ const routerContext = createBrowserRouter([
         element: <ProductPage></ProductPage>
     },
     {
-        path: "/AboutUs",
+        path: "/About",
         element: <AboutUsPage></AboutUsPage>
     },
     {
