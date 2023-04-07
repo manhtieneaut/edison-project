@@ -1,6 +1,6 @@
-import React, {useState } from 'react';
+import { useState } from 'react';
 
-const Search = ({onSearch}) => {
+const Search = ({ onSearch }) => {
 
     const [key, setKey] = useState('');
 
@@ -16,7 +16,7 @@ const Search = ({onSearch}) => {
         <div className='search'>
             <h1>Search</h1>
             <div className='search-form'>
-                <input type='text' value={key} onChange={(e)=>setKey(e.target.value)} />
+                <input type='text' value={key} onChange={(e) => setKey(e.target.value)} />
                 <button onClick={handleSearch}>Search</button>
             </div>
         </div>
