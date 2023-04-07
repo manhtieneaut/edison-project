@@ -4,7 +4,7 @@ import PromoComponent from './Promo';
 
 const AboutUsBody = () => {
     return (
-        <div className="content">
+        <div className="about-section">
             <WelcomeComponent></WelcomeComponent>
             <FunFactComponent></FunFactComponent>
             <PromoComponent></PromoComponent>

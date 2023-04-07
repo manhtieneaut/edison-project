@@ -1,5 +1,5 @@
-import "../../assets/sass/base.scss";
-import "../../assets/sass/about.scss";
+import '../../assets/sass/base/base.scss';
+import '../../assets/sass/about/welcome.scss';
 
 const WelcomeComponent = () => {
     return (

@@ -1,5 +1,5 @@
-import '../assets/sass/base.scss';
-import '../assets/sass/advertise.scss';
+import '../../assets/sass/base/base.scss';
+import '../../assets/sass/common/advertise.scss';
 
 const Advertise = () => {
     return (

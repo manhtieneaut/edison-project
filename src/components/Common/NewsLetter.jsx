@@ -1,7 +1,9 @@
-import '../assets/sass/base.scss';
-import '../assets/sass/newsletter.scss';
+import '../../assets/sass/base/base.scss';
+import '../../assets/sass/common/newsletter.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+
 const NewsLetter = () => {
     return (
         <div className="newsletter-section">

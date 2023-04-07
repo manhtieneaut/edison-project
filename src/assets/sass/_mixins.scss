@@ -69,3 +69,24 @@
         transform: translate(-50%, -50%);
     }
 }
+
+@mixin posRAlignHorizontal($dir) {
+    @if $dir =="right" {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    @else if $dir =="center" {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @else if $dir =="left" {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
