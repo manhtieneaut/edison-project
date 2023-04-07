@@ -1,25 +1,18 @@
 import { useState } from 'react';
 
 const Search = ({ onSearch }) => {
+  const [searchKey, setSearchKey] = useState('');
 
-    const [key, setKey] = useState('');
+  const handleSearch = () => {
+    onSearch(searchKey);
+  };
 
-    const handleSearch = async () => {
-        return await fetch(`https://dummyjson.com/products/search?q=${key}`)
-            .then(res => res.json())
-            .then(data => {
-                onSearch(data.products)
-            })
-            .catch(err => console.log(err))
-    }
-    return (
-        <div className='search'>
-            <h1>Search</h1>
-            <div className='search-form'>
-                <input type='text' value={key} onChange={(e) => setKey(e.target.value)} />
-                <button onClick={handleSearch}>Search</button>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <input type="text" value={searchKey} onChange={(e) => setSearchKey(e.target.value)} />
+      <button onClick={handleSearch}>Search</button>
+    </div>
+  );
+};
+
 export default Search;
