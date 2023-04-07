@@ -1,5 +1,5 @@
 import Pagination from '../Pagination/Pagination';
-import Search from '../Search';
+import Search from '../Search/Search';
 
 import { searchProduct } from '../../Redux/productSlice';
 import { useDispatch } from 'react-redux';
@@ -16,7 +16,7 @@ const ProductList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
 
-  
+
   const handleSearch = (key) => {
     dispatch(searchProduct(key))
       .then((action) => {
@@ -49,8 +49,6 @@ const ProductList = () => {
     getData();
   }, [currentPage]);
 
-
-
   const addToCart = (item) => {
     try {
       localStorage.removeItem('cart');
@@ -60,12 +58,10 @@ const ProductList = () => {
       cart.push(item);
       localStorage.setItem('cart', JSON.stringify(cart));
       console.log('cart:', cart);
-
     } catch (error) {
       console.error('Lỗi khi thêm vào giỏ hàng:', error);
     }
     navigate('/Cart');
-
   };
 
   return (

@@ -74,46 +74,7 @@
                 .header-top-form {
                     width: 29.2rem;
                     display: flex;
-                    justify-content: space-between;
-
-                    &-block {
-                        .header-top-form-wrap {
-                            border-bottom: solid 1px var(--text-color);
-                            position: relative;
-
-                            .header-search-input,
-                            .header-search-input:focus {
-                                border: none;
-                                margin-top: 1.6rem;
-                                font-size: 1.6rem;
-                            }
-
-                            .header-search-input {
-                                color: var(--text-color);
-                            }
-
-                            .header-search-input:focus {
-                                outline: none;
-                                color: var(--black-color);
-                            }
-
-                            .header-search-submit {
-                                display: inline-block;
-                                box-sizing: border-box;
-                                width: 2rem;
-                                height: 2rem;
-                                padding: 0;
-                                border: none;
-                                background-image: url("../../images/headerImages/headerSearchIcon.svg");
-                                background-size: contain;
-                                background-repeat: no-repeat;
-                                background-color: transparent;
-                                position: absolute;
-                                right: 0;
-                                bottom: 5px;
-                            }
-                        }
-                    }
+                    justify-content: right;
 
                     a {
                         width: 3.2rem;
@@ -122,6 +83,7 @@
                         border-radius: 50%;
                         position: relative;
                         transform: translateY(50%);
+                        margin: 0 1rem;
 
                         .header-signin-icon {
                             font-size: 1.8rem;
